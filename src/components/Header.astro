@@ -1,5 +1,10 @@
 ---
+import "animate.css";
 ---
-<div>
-Header - tilføj navigation mm.
-</div>
+
+<div class="progress-bar h-4 fixed w-full bg-gradient-to-r from-custom-lightblue to-custom-orange left-0 origin-top-left top-0 right-0"></div>
+
+<script>
+  import { animate, stagger, inView, scroll, timeline } from "motion";
+  scroll(animate(".progress-bar", { scaleX: [0, 1] }));
+</script>
