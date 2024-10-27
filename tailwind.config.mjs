@@ -9,6 +9,11 @@ export default {
         "custom-sand": "#F3EADC",
         "custom-lightblue": "#BFDEE3",
         "custom-offwhite": "#EEEEEE",
+        "custom-green": "#268541",
+      },
+      fontFamily: {
+        bebas: ["Bebas Neue", "cursive"],
+        poppins: ["Poppins", "sans-serif"],
       },
     },
   },
