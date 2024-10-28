@@ -1,40 +1,91 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
 import Button from "../components/Button.astro";
-import NaturalLanguageForm from "../components/NaturalLanguageForm.astro"
+import NaturalLanguageForm from "../components/NaturalLanguageForm.astro";
 import Link from "../components/Link.astro";
 import { Image } from "astro:assets";
 import tommel from "../assets/images/thumbsup.png";
+import Footer from "../components/Footer.astro";
 ---
 
 <MainLayout title="#singleusesucks">
-
-    <section id="hero">
+  <section id="hero">
     <div class="w-full h-screen bg-cover bg-center bg-[url('/hero_background.webp')]">
       <div class="pt-12 px-16">
         <h1 class="font-bebas text-custom-orange text-9xl mb-4">#singleusesucks</h1>
-		<NaturalLanguageForm/>
+        <NaturalLanguageForm />
       </div>
     </div>
-</section>
+  </section>
 
-<section id="whale 1"></section>
+  <section id="whale 1"></section>
 
-<section id="platicpercentage"></section>
+  <section id="platicpercentage"></section>
 
-<section id="quote"></section>
+  <section id="quote"></section>
 
-<section id="plasticvsplastic"></section>
+  <section id="plasticvsplastic"></section>
 
-<section id="whale 2"></section>
+  <section id="whale 2"></section>
 
-<section id="piechart"></section>
+  <section id="piechart"></section>
 
-<section id="turtle"></section>
+  <section id="turtle">
+    <div class="grid grid-cols-2 font-poppins px-20">
+      <div>
+        <h2 class="text-custom-offwhite text-4xl font-medium max-w-sm">
+          DU KAN HJÆLPE MED AT <span class="text-custom-orange">BEKÆMPE</span> PLASTFORURENING
+        </h2>
+      </div>
+      <div class="space-y-4 max-w-md">
+        <p><strong>Bliv en Plastic Changer</strong></p>
+        <p>Lær mere om, hvordan du kan blive en del af Plastic Changer-bevægelsen <a href="https://example.com" class="underline">her</a>.</p>
+        <p><strong>Lav en donation</strong></p>
+        <p>Støt os med en engangsdonation eller opret et månedligt abonnement <a href="https://example.com" class="underline">her</a>.</p>
+        <p><strong>Tilmeld dig nyhedsbrevet</strong></p>
+        <p>Få opdateringer og tips til, hvordan du kan bidrage til kampen mod plast <a href="https://example.com" class="underline">her</a>.</p>
+        <p><strong>Følg os på sociale medier</strong></p>
+        <p>
+          Bliv en del af fællesskabet på
+          <a href="https://www.facebook.com/plasticchange/" class="underline">Facebook</a>,
+          <a href="https://www.instagram.com/plasticchange" class="underline">Instagram</a> og
+          <a href="https://x.com/plasticchange" class="underline">Twitter</a>.
+        </p>
+      </div>
+    </div>
+    <div>
+      <h1 class="font-bebas text-custom-orange text-9xl mb-4 px-20">#singleusesucks</h1>
+    </div>
+  </section>
 
-<section id="support"></section>
+  <section id="support">
+    <div class="grid grid-cols-2 font-poppins px-20 pt-32">
+      <div class="max-w-xs text-custom-offwhite">
+        <h2 class="text-4xl font-medium pb-8">
+          DIT BIDRAG GØR EN <span class="text-custom-orange">FORSKEL</span>
+        </h2>
+        <p>Du kan <strong>beskytte</strong> naturen, dyrelivet og vores børn mod plastik Kun med din <strong>støtte</strong> kan vi kæmpe for, at politikere og virksomheder tager ansvar for at standse overproduktion og <strong>forurening</strong> fra plastik nu og at vi kan uddanne fremtidens forbrugere.</p>
+      </div>
 
-    <Button>Klik!</Button>
-    <p>Link til <Link href="https://www.kea.dk" target="_blank">En anden side</Link></p>
-    <Image src={tommel} alt="" />
+      <div>
+        <p>JEG VIL STØTTE</p>
+        <form>
+          <div class="">
+            <input type="radio" id="maanedligt" name="betaling" checked="checked" />
+            <label for="maanedligt">Månedligt</label>
+            <input type="radio" id="enkelt" name="betaling" />
+            <label for="enkelt">En enkelt gang</label>
+          </div>
+          <div class="flex flex-col space-y-4">
+            <button class="text-black border border-black py-2 px-4 hover:bg-black transition duration-300"> Andet beløb </button>
+            <button class="bg-black text-white py-2 max-w-sm hover:bg-gray-800 transition duration-300"> Støt nu </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <Button>Klik!</Button>
+  <p>Link til <Link href="https://www.kea.dk" target="_blank">En anden side</Link></p>
+  <Image src={tommel} alt="" />
 </MainLayout>
