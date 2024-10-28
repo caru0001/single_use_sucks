@@ -3,33 +3,37 @@
 ---
 
 <form x-data="{ frequency: 'monthly', showFrequencyOptions: false, amount: '75', showAmountOptions: false }">
-  <h2 class="font-bebas text-custom-offwhite text-5xl max-w-2xl">
-    Ja, jeg vil hjælpe
-    <span class="text-custom-orange underline cursor-pointer relative" @click="showFrequencyOptions = !showFrequencyOptions">
-      <span x-text="frequency === 'monthly' ? 'månedligt' : 'én enkelt gang'"></span>
+  <h2 class="font-poppins text-custom-offwhite text-4xl max-w-4xl leading-relaxed font-medium">
+    Ja, jeg vil hjælpe <span>
+      <select class="border-b-2 border-dotted bg-transparent text-custom-orange font-poppins text-4xl">
+        <option class="">månedligt</option>
+        <option>en enkelt gang</option>
+      </select>
     </span>
     med at stoppe plastikforurening med
-    <span class="text-custom-orange underline cursor-pointer relative" @click="showAmountOptions = !showAmountOptions">
-      <span x-text="amount + ' kr.'"></span>
-    </span>.
- 
-  <!-- Dropdown til månedligt/en enkelt gang -->
-  <div x-show="showFrequencyOptions" class="absolute bg-custom-ocean mt-1 shadow-lg">
-    <span class="block font-bebas text-custom-orange text-5xl underline cursor-pointer p-2" @click="frequency = 'monthly'; showFrequencyOptions = false">Månedligt</span>
-    <span class="block font-bebas text-custom-orange text-5xl underline cursor-pointer p-2" @click="frequency = 'one-time'; showFrequencyOptions = false">En enkelt gang</span>
-  </div>
+    <span>
+      <select class="border-b-2 border-dotted bg-transparent text-custom-orange font-poppins text-4xl">
+        <option class="">75 kr.</option>
+        <option>50 kr.</option>
+        <option>125 kr.</option>
+      </select>
+    </span>
 
-  <!-- Dropdown til 50 kr./75 kr./125 kr. -->
-  <div x-show="showAmountOptions" class="absolute bg-custom-ocean mt-1 shadow-lg">
-    <span class="block font-bebas text-custom-orange text-5xl underline cursor-pointer p-2" @click="amount = '75'; showAmountOptions = false">75 kr.</span>
-    <span class="block font-bebas text-custom-orange text-5xl underline cursor-pointer p-2" @click="amount = '50'; showAmountOptions = false">50 kr.</span>
-    <span class="block font-bebas text-custom-orange text-5xl underline cursor-pointer p-2" @click="amount = '125'; showAmountOptions = false">125 kr.</span>
-  </div>
- </h2>
+    <!-- Dropdown til månedligt/en enkelt gang -->
+    <div x-show="showFrequencyOptions" class="absolute bg-custom-ocean mt-1 shadow-lg">
+      <span class="block font-bebas text-custom-orange text-5xl underline cursor-pointer p-2" @click="frequency = 'monthly'; showFrequencyOptions = false">Månedligt</span>
+      <span class="block font-bebas text-custom-orange text-5xl underline cursor-pointer p-2" @click="frequency = 'one-time'; showFrequencyOptions = false">En enkelt gang</span>
+    </div>
+
+    <!-- Dropdown til 50 kr./75 kr./125 kr. -->
+    <div x-show="showAmountOptions" class="absolute bg-custom-ocean mt-1 shadow-lg">
+      <span class="block font-bebas text-custom-orange text-5xl underline cursor-pointer p-2" @click="amount = '75'; showAmountOptions = false">75 kr.</span>
+      <span class="block font-bebas text-custom-orange text-5xl underline cursor-pointer p-2" @click="amount = '50'; showAmountOptions = false">50 kr.</span>
+      <span class="block font-bebas text-custom-orange text-5xl underline cursor-pointer p-2" @click="amount = '125'; showAmountOptions = false">125 kr.</span>
+    </div>
+  </h2>
 
   <div class="mt-8">
-    <button type="submit" class="bg-custom-green font-poppins px-10 py-2 uppercase text-custom-offwhite font-bold shadow-lg" @click="alert('Mange tak for din støtte! Dit bidrag gør en stor forskel i kampen mod single use plastik og plastikforurening.')">Gør en forskel</button>
+    <button type="submit" class="bg-custom-green font-poppins px-10 py-2 uppercase text-custom-offwhite font-bold shadow-lg opacity-90" @click="alert('Mange tak for din støtte! Dit bidrag gør en stor forskel i kampen mod single use plastik og plastikforurening.')">Gør en forskel</button>
   </div>
-
 </form>
-
