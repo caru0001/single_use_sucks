@@ -4,11 +4,12 @@ import Button from "../components/Button.astro";
 import NaturalLanguageForm from "../components/NaturalLanguageForm.astro"
 import Link from "../components/Link.astro";
 import { Image } from "astro:assets";
-import thumbsup from "../assets/images/thumbsup.png";
+import tommel from "../assets/images/thumbsup.png";
 ---
 
 <MainLayout title="#singleusesucks">
-    <section>
+
+    <section id="hero">
     <div class="w-full h-screen bg-cover bg-center bg-[url('/hero_background.webp')]">
       <div class="pt-12 px-16">
         <h1 class="font-bebas text-custom-orange text-9xl mb-4">#singleusesucks</h1>
@@ -16,7 +17,24 @@ import thumbsup from "../assets/images/thumbsup.png";
       </div>
     </div>
 </section>
+
+<section id="whale 1"></section>
+
+<section id="platicpercentage"></section>
+
+<section id="quote"></section>
+
+<section id="plasticvsplastic"></section>
+
+<section id="whale 2"></section>
+
+<section id="piechart"></section>
+
+<section id="turtle"></section>
+
+<section id="support"></section>
+
     <Button>Klik!</Button>
     <p>Link til <Link href="https://www.kea.dk" target="_blank">En anden side</Link></p>
-    <Image src={thumbsup} alt="" />
+    <Image src={tommel} alt="" />
 </MainLayout>
