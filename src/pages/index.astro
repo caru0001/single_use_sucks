@@ -8,10 +8,14 @@ import tommel from "../assets/images/thumbsup.png";
 import Footer from "../components/Footer.astro";
 import bluewhale from "../assets/images/mrwhale.webp";
 import whaleleft from "../assets/images/hvalfravenstre.webp";
+import plasticbag from "../assets/images/plastikpose.webp";
+import plasticbottle from "../assets/images/plastikflaske.webp";
+import plasticfork from "../assets/images/plastikgaffel.webp";
+import plasticspoon from "../assets/images/plastikske.webp";
 ---
 
 <MainLayout title="#singleusesucks">
-  <section id="hero" class="w-full h-screen bg-cover bg-center bg-[url('/hero_background.webp')] pb-24">
+  <section id="hero" class="w-full h-screen bg-cover bg-center bg-[url('/hero_background.webp')] pb-24 mb-24">
     <div>
       <div x-data="{ showMenu: false }" class="px-8 pb-2 pt-2 w-full">
         <div id="navbar" class="flex flex-row justify-between items-center">
@@ -37,10 +41,17 @@ import whaleleft from "../assets/images/hvalfravenstre.webp";
         </nav>
       </div>
     </div>
-    <div class="pt-12 px-16">
+    <div class="pt-12 px-16 z-10 relative">
       <h1 class="font-bebas text-custom-orange text-9xl mb-4">#singleusesucks</h1>
       <NaturalLanguageForm />
     </div>
+    <div class="overflow-hidden"><Image class="absolute z-0 w-[25%] h-auto max-w-none" style="left: 600px; top: 55%;" src={plasticbag} alt="plastic bag" /></div>
+    <div class="overflow-hidden"><Image class="absolute z-0 w-[15%] h-auto max-w-none" style="left: 950px; top: 25%; transform: rotate(80deg)" src={plasticbag} alt="plastic bag" /></div>
+    <div class="overflow-hidden"><Image class="absolute z-0 w-[20%] h-auto max-w-none" style="left: 30px; top: 60%; transform: rotate(100deg)" src={plasticbottle} alt="plastic bag" /></div>
+    <div class="overflow-hidden"><Image class="absolute z-0 w-[10%] h-auto max-w-none" style="left: 1000px; top: 70%; transform: rotate(260deg)" src={plasticbottle} alt="plastic bag" /></div>
+    <div class="overflow-hidden"><Image class="absolute z-0 w-[10%] h-auto max-w-none" style="left: 380px; top: 70%; transform: rotate(300deg)" src={plasticfork} alt="plastic bag" /></div>
+    <div class="overflow-hidden"><Image class="absolute z-0 w-[7%] h-auto max-w-none" style="left: 900px; top: 60%; transform: rotate(10deg)" src={plasticfork} alt="plastic bag" /></div>
+    <div class="overflow-hidden"><Image class="absolute z-0 w-[9%] h-auto max-w-none" style="left: 670px; top: 70%; transform: rotate(-30deg)" src={plasticspoon} alt="plastic bag" /></div>
   </section>
 
   <section id="whale 1" class="pb-40 mb-48">
@@ -52,20 +63,7 @@ import whaleleft from "../assets/images/hvalfravenstre.webp";
         <p class="max-w-lg text-custom-ocean bg-custom-lightblue opacity-75 px-8 py-8">Plastikforurening opstår, når plastikaffald ender i naturen og bliver der i årtier. Kun <strong>5% af plastikken</strong> flyder på overfladen, mens <strong>95% ligger dybere</strong> i vandsøjlen, hvilket gør det sværere at opdage.</p>
       </div>
     </div>
-    <div class="overflow-hidden"><Image class="absolute z-0 w-[180%] h-auto max-w-none" style="left: -350px; top: 15%;" src={bluewhale} alt="whale" /></div>
-  </section>
-
-  <section id="platicpercentage">
-    <div class="h-screen text-center flex items-center justify-center">
-      <div>
-        <h2 class="font-bebas text-custom-offwhite text-5xl leading-relaxed">
-          <span class="text-custom-orange">5%</span> FLYDER I OVERFLADEN
-        </h2>
-        <h2 class="font-bebas text-custom-offwhite text-5xl leading-relaxed">
-          <span class="text-custom-orange">95%</span> FALDER LÆNGERE NED I HAVET
-        </h2>
-      </div>
-    </div>
+    <div class="overflow-hidden"><Image class="absolute z-0 w-[180%] h-auto max-w-none" style="left: -350px; top: 35%;" src={bluewhale} alt="whale" /></div>
   </section>
 
   <section id="platicpercentage">
