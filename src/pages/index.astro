@@ -6,6 +6,7 @@ import Link from "../components/Link.astro";
 import { Image } from "astro:assets";
 import tommel from "../assets/images/thumbsup.png";
 import Footer from "../components/Footer.astro";
+import bluewhale from "../assets/images/mrwhale.webp";
 ---
 
 <MainLayout title="#singleusesucks">
@@ -79,7 +80,6 @@ import Footer from "../components/Footer.astro";
           <div class="flex flex-col space-y-4">
             <button class="text-black border border-black py-2 px-4 hover:bg-black transition duration-300"> Andet beløb </button>
             <button class="bg-black text-white py-2 max-w-sm hover:bg-gray-800 transition duration-300"> Støt nu </button>
-            <p>test</p>
           </div>
         </form>
       </div>
@@ -90,3 +90,12 @@ import Footer from "../components/Footer.astro";
   <p>Link til <Link href="https://www.kea.dk" target="_blank">En anden side</Link></p>
   <Image src={tommel} alt="" /> -->
 </MainLayout>
+
+<script>
+  import { animate, stagger, inView, scroll, timeline } from "motion";
+  scroll(animate(".progress-bar", { scaleX: [0, 1] }));
+
+  scroll(animate(".parallaxelement", { y: [0, 150] }), {
+    target: document.querySelector(".parallaxelement"),
+  });
+</script>
