@@ -12,17 +12,21 @@ import plasticbag from "../assets/images/plastikpose.webp";
 import plasticbottle from "../assets/images/plastikflaske.webp";
 import plasticfork from "../assets/images/plastikgaffel.webp";
 import plasticspoon from "../assets/images/plastikske.webp";
+import plasticcup from "../assets/images/plastikkopgennemsigtig.webp";
 ---
 
 <MainLayout title="#singleusesucks">
   <section id="hero" class="w-full h-screen bg-cover bg-center bg-[url('/hero_background.webp')] pb-24 mb-24">
-    <div>
+    <div class="pt-4">
       <div x-data="{ showMenu: false }" class="px-8 pb-2 pt-2 w-full">
         <div id="navbar" class="flex flex-row justify-between items-center">
           <div id="logo" class="flex items-center py-2">
             <a href="/">
               <p class="text-custom-offwhite">plastic change</p>
             </a>
+          </div>
+          <div class="z-10 mr-10">
+            <button type="submit" class="bg-custom-green font-poppins px-10 py-2 uppercase text-custom-offwhite font-bold shadow-lg opacity-90" @click="alert('Mange tak for din støtte! Dit bidrag gør en stor forskel i kampen mod single use plastik og plastikforurening.')">Støt nu</button>
           </div>
           <!-- Burger menu -->
           <button id="burgermenu" class="mr-4 fixed right-0" @click="showMenu = !showMenu">
@@ -52,6 +56,7 @@ import plasticspoon from "../assets/images/plastikske.webp";
     <div class="overflow-hidden"><Image class="absolute z-0 w-[10%] h-auto max-w-none" style="left: 380px; top: 70%; transform: rotate(300deg)" src={plasticfork} alt="plastic bag" /></div>
     <div class="overflow-hidden"><Image class="absolute z-0 w-[7%] h-auto max-w-none" style="left: 900px; top: 60%; transform: rotate(10deg)" src={plasticfork} alt="plastic bag" /></div>
     <div class="overflow-hidden"><Image class="absolute z-0 w-[9%] h-auto max-w-none" style="left: 670px; top: 70%; transform: rotate(-30deg)" src={plasticspoon} alt="plastic bag" /></div>
+    <div class="overflow-hidden"><Image class="absolute z-0 w-[9%] h-auto max-w-none opacity-70" style="left: 1150px; top: 60%; transform: rotate(-30deg)" src={plasticcup} alt="plastic bag" /></div>
   </section>
 
   <section id="whale 1" class="pb-40 mb-48">
