@@ -11,16 +11,39 @@ import whaleleft from "../assets/images/hvalfravenstre.webp";
 ---
 
 <MainLayout title="#singleusesucks">
-  <section id="hero">
-    <div class="w-full h-screen bg-cover bg-center bg-[url('/hero_background.webp')]">
-      <div class="pt-12 px-16">
-        <h1 class="font-bebas text-custom-orange text-9xl mb-4">#singleusesucks</h1>
-        <NaturalLanguageForm />
+  <section id="hero" class="w-full h-screen bg-cover bg-center bg-[url('/hero_background.webp')] pb-24">
+    <div>
+      <div x-data="{ showMenu: false }" class="px-8 pb-2 pt-2 w-full">
+        <div id="navbar" class="flex flex-row justify-between items-center">
+          <div id="logo" class="flex items-center py-2">
+            <a href="/">
+              <p class="text-custom-offwhite">plastic change</p>
+            </a>
+          </div>
+          <!-- Burger menu -->
+          <button id="burgermenu" class="mr-4 fixed right-0" @click="showMenu = !showMenu">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8 text-[#EBF4E9]">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"></path>
+            </svg>
+          </button>
+        </div>
+        <!-- Dropdown Menu -->
+        <nav id="mobilmenu" x-show="showMenu" x-transition class="flex flex-col items-end text-custom-offwhite pt-4 pr-4 font-medium fixed right-0">
+          <ul class="w-full text-right">
+            <li class="py-2"><a href="/" class="block w-full px-4 py-2 no-underline">Plastproblemet</a></li>
+            <li class="py-2"><a href="/" class="block w-full px-4 py-2 no-underline">Om plastic change</a></li>
+            <li class="py-2"><a href="/form" class="block w-full px-4 py-2 no-underline">Hvad kan du gøre?</a></li>
+          </ul>
+        </nav>
       </div>
+    </div>
+    <div class="pt-12 px-16">
+      <h1 class="font-bebas text-custom-orange text-9xl mb-4">#singleusesucks</h1>
+      <NaturalLanguageForm />
     </div>
   </section>
 
-  <section id="whale 1" class="overflow-hidden pb-40 mb-48">
+  <section id="whale 1" class="pb-40 mb-48">
     <div class="md:grid grid-cols-2 gap-2 mx-16 relative z-10">
       <div>
         <h2 class="font-bebas text-custom-offwhite text-6xl mb-4 max-w-xxs">Skrald der <span class="text-custom-orange">aldrig</span> forsvinder</h2>
@@ -29,7 +52,20 @@ import whaleleft from "../assets/images/hvalfravenstre.webp";
         <p class="max-w-lg text-custom-ocean bg-custom-lightblue opacity-75 px-8 py-8">Plastikforurening opstår, når plastikaffald ender i naturen og bliver der i årtier. Kun <strong>5% af plastikken</strong> flyder på overfladen, mens <strong>95% ligger dybere</strong> i vandsøjlen, hvilket gør det sværere at opdage.</p>
       </div>
     </div>
-    <Image class="absolute z-0 w-[180%] h-auto max-w-none" style="left: -350px; top: 15%;" src={bluewhale} alt="whale" />
+    <div class="overflow-hidden"><Image class="absolute z-0 w-[180%] h-auto max-w-none" style="left: -350px; top: 15%;" src={bluewhale} alt="whale" /></div>
+  </section>
+
+  <section id="platicpercentage">
+    <div class="h-screen text-center flex items-center justify-center">
+      <div>
+        <h2 class="font-bebas text-custom-offwhite text-5xl leading-relaxed">
+          <span class="text-custom-orange">5%</span> FLYDER I OVERFLADEN
+        </h2>
+        <h2 class="font-bebas text-custom-offwhite text-5xl leading-relaxed">
+          <span class="text-custom-orange">95%</span> FALDER LÆNGERE NED I HAVET
+        </h2>
+      </div>
+    </div>
   </section>
 
   <section id="platicpercentage">
