@@ -1,40 +1,78 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
 import Button from "../components/Button.astro";
-import NaturalLanguageForm from "../components/NaturalLanguageForm.astro"
+import NaturalLanguageForm from "../components/NaturalLanguageForm.astro";
 import Link from "../components/Link.astro";
 import { Image } from "astro:assets";
 import tommel from "../assets/images/thumbsup.png";
+import bluewhale from "../assets/images/mrwhale.webp";
 ---
 
 <MainLayout title="#singleusesucks">
-
-    <section id="hero">
+  <section id="hero">
     <div class="w-full h-screen bg-cover bg-center bg-[url('/hero_background.webp')]">
       <div class="pt-12 px-16">
         <h1 class="font-bebas text-custom-orange text-9xl mb-4">#singleusesucks</h1>
-		<NaturalLanguageForm/>
+        <NaturalLanguageForm />
       </div>
     </div>
-</section>
+  </section>
 
-<section id="whale 1"></section>
+  <section id="whale 1" class="overflow-hidden pb-40 mb-48">
+    <div class="md:grid grid-cols-2 gap-2 mx-16 relative z-10">
+      <div>
+        <h2 class="font-bebas text-custom-offwhite text-5xl mb-4 max-w-xxs">Skrald der <span class="text-custom-orange">aldrig</span> forsvinder</h2>
+      </div>
+      <div class="parallaxelement">
+        <p class="max-w-lg font-poppins text-custom-ocean bg-custom-lightblue opacity-75 px-8 py-8">Plastikforurening opstår, når plastikaffald ender i naturen og bliver der i årtier. Kun <strong>5% af plastikken</strong> flyder på overfladen, mens <strong>95% ligger dybere</strong> i vandsøjlen, hvilket gør det sværere at opdage.</p>
+      </div>
+    </div>
+    <Image class="absolute z-0 w-[180%] h-auto max-w-none" style="left: -350px; top: 15%;" src={bluewhale} alt="whale" />
+  </section>
 
-<section id="platicpercentage"></section>
+  <section id="platicpercentage"></section>
 
-<section id="quote"></section>
+  <section id="quote"></section>
 
-<section id="plasticvsplastic"></section>
+  <section id="plasticvsplastic"></section>
 
-<section id="whale 2"></section>
+  <section id="whale 2" class="mx-16 mb-8">
+    <p class="max-w-lg font-poppins text-custom-ocean bg-custom-lightblue opacity-75 px-8 py-8">Plastic Change har som mission at skabe handling lokalt, nationalt og globalt. Vi sætter fokus på plastikudfordringerne gennem mobilisering, vidensdeling og samarbejde med befolkning, erhvervsliv og politikere.</p>
+    <br />
+    <p class="max-w-lg font-poppins text-custom-ocean bg-custom-lightblue opacity-75 px-8 py-8">Vores vision er et miljø uden plastikforurening, så kommende generationer kan nyde havets ressourcer uden risiko for plastikindhold.</p>
+  </section>
 
-<section id="piechart"></section>
+  <section id="piechart" class="mx-16 mb-8">
+    <div class="text-custom-offwhite font-poppins max-w-xs">
+      <p class="font-bold">Projektstyring og administration (8%)</p>
+      <p>En lille del til administration, og til at give Plastic Change et sted at bo.</p>
+    </div>
+    <br />
+    <div class="text-custom-offwhite font-poppins max-w-xs">
+      <p class="font-bold">Fundraising og indsamlinger (22%)</p>
+      <p>En mindre del går til fundraising og indsamlinger, så Plastic Changer bevægelsen kan blive ved med at vokse.</p>
+    </div>
+    <br />
+    <div class="text-custom-offwhite font-poppins max-w-xs">
+      <p class="font-bold">Hav- og miljøindsatser (70%)</p>
+      <p>Størstedelen af din støtte går til at mindske plastikforurening gennem oplysning, events, undervisning og mobilisering af Plastic Changer-bevægelsen. Vi leder også årlige natur-oprydninger globalt og arbejder politisk for bedre miljølovgivning.</p>
+    </div>
+  </section>
 
-<section id="turtle"></section>
+  <section id="turtle"></section>
 
-<section id="support"></section>
+  <section id="support"></section>
 
-    <Button>Klik!</Button>
-    <p>Link til <Link href="https://www.kea.dk" target="_blank">En anden side</Link></p>
-    <Image src={tommel} alt="" />
+  <Button>Klik!</Button>
+  <p>Link til <Link href="https://www.kea.dk" target="_blank">En anden side</Link></p>
+  <Image src={tommel} alt="" />
 </MainLayout>
+
+<script>
+  import { animate, stagger, inView, scroll, timeline } from "motion";
+  scroll(animate(".progress-bar", { scaleX: [0, 1] }));
+
+  scroll(animate(".parallaxelement", { y: [0, 150] }), {
+    target: document.querySelector(".parallaxelement"),
+  });
+</script>

@@ -15,6 +15,9 @@ export default {
         bebas: ["Bebas Neue", "cursive"],
         poppins: ["Poppins", "sans-serif"],
       },
+      maxWidth: {
+        xxs: "16rem",
+      },
     },
   },
   plugins: [require("@tailwindcss/typography"), require("@tailwindcss/forms"), require("@tailwindcss/aspect-ratio"), require("@tailwindcss/container-queries")],
