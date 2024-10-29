@@ -1,17 +1,21 @@
 ---
-
+import Image from "astro/components/Image.astro";
+import facebook from "../assets/images/Facebook.svg"
 ---
 
-<div class="text-custom-offwhite font-poppins px-20 grid grid-cols-2 pt-72 w-full h-screen bg-cover bg-center bg-[url('/havbunden.webp')]">
+<div class="text-custom-offwhite px-16 grid grid-cols-2 pt-72 w-full h-screen bg-cover bg-custom-darkblue bg-center bg-[url('/havbunden.webp')]">
   <div>
     <div>
-      <p class="text-4xl font-medium">Bliv en del af forandringen</p>
-      <p class="text-2xl">Tilmeld dig vores nyhedsbrev</p>
-      <p class="text-2xl pt-14">Følg <strong>Plastic Change</strong> på sociale medier</p>
+      <p class="text-2xl font-bold mb-2">Bliv en del af forandringen</p>
+      <p class="text-xl">Tilmeld dig vores nyhedsbrev</p>
+      <p class="text-xl pt-14">Følg <strong>Plastic Change</strong> på sociale medier</p>
+      <Image src={facebook} alt="" />
     </div>
   </div>
-  <div>
-    <input type="email" id="email2" name="email" placeholder="E-mail" aria-label="Indtast din e-mail" class="px-28 py-4 text-custom-ocean text-center" />
-    <input type="submit" id="subscribe2" value="Tilmeld" class="text-custom-offwhite bg-custom-green border border-custom-green py-4 px-20 text-center cursor-pointer transition duration-300" />
+  <div class="flex gap-4">
+    <div>
+    <input type="email" id="email2" name="email" placeholder="E-mail" aria-label="Indtast din e-mail" class="px-12 py-4 text-custom-ocean text-center" /></div>
+    <div>
+    <input type="submit" id="subscribe2" value="Tilmeld" class="text-custom-offwhite bg-custom-green border border-custom-green py-4 px-12 text-center cursor-pointer transition duration-300" /></div>
   </div>
 </div>

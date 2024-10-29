@@ -10,6 +10,7 @@ export default {
         "custom-lightblue": "#BFDEE3",
         "custom-offwhite": "#EEEEEE",
         "custom-green": "#268541",
+        "custom-darkblue": "#032433",
       },
       fontFamily: {
         bebas: ["Bebas Neue", "cursive"],
