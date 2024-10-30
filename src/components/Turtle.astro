@@ -1,0 +1,48 @@
+---
+import { Image } from "astro:assets";
+import skildpadde from "../assets/images/skildpadde.webp";
+---
+
+<section id="turtle" class="relative">
+  <div class="grid grid-cols-2 mx-16 relative z-10">
+    <div>
+      <h2 class="text-custom-offwhite font-bebas text-5xl max-w-sm max-w-xxs">
+        DU KAN HJÆLPE MED AT <span class="text-custom-orange">BEKÆMPE</span> PLASTFORURENING
+      </h2>
+    </div>
+    <div>
+      <div class="max-w-lg text-custom-ocean bg-custom-lightblue opacity-75 px-8 py-8">
+        <p><strong>Bliv en Plastic Changer</strong></p>
+        <p>Lær mere om, hvordan du kan blive en del af Plastic Changer-bevægelsen <a href="https://example.com" class="underline">her</a>.</p>
+      </div>
+      <br />
+      <div class="max-w-lg text-custom-ocean bg-custom-lightblue opacity-75 px-8 py-8">
+        <p><strong>Lav en donation</strong></p>
+        <p>Støt os med en engangsdonation eller opret et månedligt abonnement <a href="https://example.com" class="underline">her</a>.</p>
+      </div>
+      <br />
+      <div class="max-w-lg text-custom-ocean bg-custom-lightblue opacity-75 px-8 py-8">
+        <p><strong>Tilmeld dig nyhedsbrevet</strong></p>
+        <p>Få opdateringer og tips til, hvordan du kan bidrage til kampen mod plast <a href="https://example.com" class="underline">her</a>.</p>
+      </div>
+      <br />
+      <div class="max-w-lg text-custom-ocean bg-custom-lightblue opacity-75 px-8 py-8">
+        <p><strong>Følg os på sociale medier</strong></p>
+        <p>
+          Bliv en del af fællesskabet på
+          <a href="https://www.facebook.com/plasticchange/" class="underline">Facebook</a>,
+          <a href="https://www.instagram.com/plasticchange" class="underline">Instagram</a> og
+          <a href="https://x.com/plasticchange" class="underline">Twitter</a>.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="relative z-10">
+    <h1 class="font-bebas text-custom-orange text-9xl mb-4 px-20">#singleusesucks</h1>
+  </div>
+
+  <!-- Billede -->
+  <div class="absolute w-[60%] h-auto max-w-none z-0" style="left: 50%; top: -15%; transform: translateX(-50%) rotate(0deg);">
+    <Image src={skildpadde} alt="skildpadde" />
+  </div>
+</section>

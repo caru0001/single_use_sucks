@@ -1,0 +1,56 @@
+---
+import { Image } from "astro:assets";
+import bobler from "../assets/images/bobler.webp";
+import net from "../assets/images/net.webp";
+---
+
+<section class="relative mt-32" id="support">
+  <div class="grid grid-cols-2 mx-16 pt-32 relative z-10">
+    <div class="max-w-xs text-custom-offwhite z-10">
+      <h2 class="text-5xl font-bebas pb-8 max-w-xxs">
+        DIT BIDRAG GØR EN <span class="text-custom-orange">FORSKEL</span>
+      </h2>
+      <p class="mb-4">Du kan <strong>beskytte</strong> naturen, dyrelivet og vores børn mod plastik.</p>
+      <p>Kun med din <strong>støtte</strong> kan vi kæmpe for, at politikere og virksomheder tager ansvar for at standse overproduktion og <strong>forurening</strong> fra plastik nu og at vi kan uddanne fremtidens forbrugere.</p>
+    </div>
+
+    <!-- form -->
+    <div class="bg-custom-lightblue opacity-75 rounded-2xl w-[27rem] h-[30rem] p-10 ml-12">
+      <p class="text-3xl font-bebas mb-12 text-custom-darkblue">JEG VIL STØTTE</p>
+      <form>
+        <div class="mb-8 flex gap-10">
+          <label class="flex items-center space-x-2 cursor-pointer">
+            <input type="radio" id="maanedligt" name="betaling" checked class="hidden peer" />
+            <span class="w-5 h-5 border-2 border-custom-darkblue rounded-full peer-checked:bg-custom-darkblue peer-checked:border-custom-darkblue"></span>
+            <span class="text-lg">Månedligt</span>
+          </label>
+          <label class="flex items-center space-x-2 cursor-pointer">
+            <input type="radio" id="enkelt" name="betaling" class="hidden peer" />
+            <span class="w-5 h-5 border-2 border-custom-darkblue rounded-full peer-checked:bg-custom-darkblue peer-checked:border-custom-darkblue"></span>
+            <span class="text-lg">En enkelt gang</span>
+          </label>
+        </div>
+        <div class="flex space-x-4 mt-6 mb-4 items-center gap-8">
+          <button type="button" class="bg-transparent text-custom-darkblue border border-custom-darkblue rounded-full py-6 px-7 text-lg hover:bg-custom-darkblue hover:text-custom-offwhite transition duration-300">50</button>
+          <button type="button" class="bg-transparent text-custom-darkblue border border-custom-darkblue rounded-full py-6 px-7 text-lg hover:bg-custom-darkblue hover:text-custom-offwhite transition duration-300">75</button>
+          <button type="button" class="bg-transparent text-custom-darkblue border border-custom-darkblue rounded-full py-6 px-6 text-lg hover:bg-custom-darkblue hover:text-custom-offwhite transition duration-300">125</button>
+        </div>
+
+        <div class="flex flex-col space-y-4 mt-8">
+          <input type="text" id="customAmount" placeholder="Andet beløb" class="bg-transparent border border-custom-darkblue text-custom-darkblue text-center text-lg focus:outline-none focus:ring-2 focus:ring-custom-darkblue transition duration-300" />
+          <button type="button" class="bg-custom-darkblue text-lg text-custom-offwhite py-2 hover:bg-gray-800 transition duration-300">STØT NU</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Første billede -->
+  <div class="absolute w-[90%] h-auto max-w-none opacity-70 z-0" style="left: -5%; top: 15%; transform: translateY(-50%) rotate(-10deg);">
+    <Image src={bobler} alt="bobler" />
+  </div>
+
+  <!-- Andet billede -->
+  <div class="absolute w-[100%] h-auto max-w-none z-0" style="right: -10%; top: -20%; transform: rotate(15deg);">
+    <Image src={net} alt="net" />
+  </div>
+</section>

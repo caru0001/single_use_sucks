@@ -1,0 +1,47 @@
+---
+import { Image } from "astro:assets";
+import whalebag from "../assets/images/posehval.webp";
+import plasticbottle from "../assets/images/plastikflaske.webp";
+import arrows from "../assets/images/arrows.svg";
+import bubbles from "../assets/images/bobler.webp";
+import plasticbag from "../assets/images/plastikpose.webp";
+import plasticfork from "../assets/images/plastikgaffel.webp";
+import plasticspoon from "../assets/images/plastikske.webp";
+import plasticcup from "../assets/images/plastikkopgennemsigtig.webp";
+---
+
+<section id="platicpercentage relative">
+  <div class="h-screen text-center flex items-center justify-center">
+    <div>
+      <h2 class="font-bebas text-custom-offwhite text-5xl leading-relaxed">
+        <span class="text-custom-orange">5%</span> FLYDER I OVERFLADEN
+      </h2>
+      <Image src={arrows} alt="arrows up and down" class="opacity-80 mx-auto" />
+      <h2 class="font-bebas text-custom-offwhite text-5xl leading-relaxed">
+        <span class="text-custom-orange">95%</span> FALDER LÆNGERE NED I HAVET
+      </h2>
+    </div>
+    <div><Image class="absolute z-0 w-[90%] opacity-80" style="left: -75px; top: 220%;" src={bubbles} alt="bubbles" /></div>
+    <div><Image class="absolute z-0 w-[22%] opacity-85" style="left: 400px; top: 312%; transform: rotate(80deg)" src={whalebag} alt="plastic fork" /></div>
+    <div><Image class="absolute z-0 w-[22%] opacity-85" style="left: 800px; top: 315%; transform: rotate(120deg)" src={whalebag} alt="plastic fork" /></div>
+    <div><Image class="absolute z-0 w-[17%] opacity-90" style="left: 600px; top: 315%;" src={plasticbag} alt="plastic bag" /></div>
+    <div><Image class="absolute z-0 w-[14%] opacity-90" style="left: 400px; top: 300%; transform: rotate(90deg)" src={plasticbag} alt="plastic bag" /></div>
+    <div><Image class="absolute z-0 w-[16%] opacity-90" style="left: 800px; top: 305%; transform: rotate(40deg)" src={plasticbag} alt="plastic bag" /></div>
+    <div><Image class="absolute z-0 w-[17%] opacity-90" style="left: 220px; top: 305%; transform: rotate(10deg)" src={plasticbag} alt="plastic bag" /></div>
+    <div><Image class="absolute z-0 w-[17%] opacity-80" style="left: 700px; top: 300%; transform: rotate(90deg)" src={plasticbottle} alt="plastic bottle" /></div>
+    <div><Image class="absolute z-0 w-[14%] opacity-80" style="left: 300px; top: 315%; transform: rotate(20deg)" src={plasticbottle} alt="plastic bottle" /></div>
+    <div><Image class="absolute z-0 w-[15%] opacity-80" style="left: 500px; top: 305%; transform: rotate(10deg)" src={plasticbottle} alt="plastic bottle" /></div>
+    <div><Image class="absolute z-0 w-[17%] opacity-80" style="left: 550px; top: 300%; transform: rotate(40deg)" src={plasticbottle} alt="plastic bottle" /></div>
+    <div><Image class="absolute z-0 w-[10%] opacity-70" style="left: 360px; top: 320%; transform: rotate(160deg)" src={plasticcup} alt="plastic cup" /></div>
+    <div><Image class="absolute z-0 w-[10%] opacity-70" style="left: 700px; top: 315%; transform: rotate(60deg)" src={plasticcup} alt="plastic cup" /></div>
+    <div><Image class="absolute z-0 w-[10%] opacity-70" style="left: 850px; top: 305%; transform: rotate(220deg)" src={plasticcup} alt="plastic cup" /></div>
+    <div><Image class="absolute z-0 w-[12%] opacity-70" style="left: 920px; top: 305%; transform: rotate(240deg)" src={plasticcup} alt="plastic cup" /></div>
+    <div><Image class="absolute z-0 w-[10%] opacity-85" style="left: 940px; top: 305%; transform: rotate(180deg)" src={plasticfork} alt="plastic fork" /></div>
+    <div><Image class="absolute z-0 w-[10%] opacity-85" style="left: 500px; top: 320%; transform: rotate(10deg)" src={plasticfork} alt="plastic fork" /></div>
+    <div><Image class="absolute z-0 w-[10%] opacity-85" style="left: 650px; top: 310%; transform: rotate(220deg)" src={plasticfork} alt="plastic fork" /></div>
+    <div><Image class="absolute z-0 w-[12%] opacity-85" style="left: 550px; top: 310%; transform: rotate(40deg)" src={plasticfork} alt="plastic fork" /></div>
+    <div><Image class="absolute z-0 w-[10%] opacity-85" style="left: 800px; top: 315%; transform: rotate(180deg)" src={plasticspoon} alt="plastic fork" /></div>
+    <div><Image class="absolute z-0 w-[10%] opacity-85" style="left: 300px; top: 310%; transform: rotate(80deg)" src={plasticspoon} alt="plastic fork" /></div>
+    <div><Image class="absolute z-0 w-[10%] opacity-75" style="left: 400px; top: 310%; transform: rotate(240deg)" src={plasticspoon} alt="plastic fork" /></div>
+  </div>
+</section>
