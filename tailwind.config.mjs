@@ -19,6 +19,12 @@ export default {
       maxWidth: {
         xxs: "16rem",
       },
+      rotate: {
+        30: "30deg",
+        45: "45deg",
+        90: "90deg",
+        100: "100deg",
+      },
     },
   },
   plugins: [require("@tailwindcss/typography"), require("@tailwindcss/forms"), require("@tailwindcss/aspect-ratio"), require("@tailwindcss/container-queries")],

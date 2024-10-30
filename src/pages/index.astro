@@ -18,7 +18,7 @@ import Support from "../components/Support.astro";
 ---
 
 <MainLayout title="#singleusesucks">
-  <section id="hero" class="w-full h-screen bg-cover bg-center bg-[url('/hero_background.webp')] pb-24 mb-56">
+  <section id="hero" class="w-full h-screen bg-cover bg-center bg-[url('/hero_background.webp')] pb-24 mb-8 sm:mb-32 md:mb-40 lg:mb-48 relative grid grid-rows-1 grid-cols-1">
     <div class="pt-4">
       <div x-data="{ showMenu: false }" class="px-8 pb-2 pt-2 w-full">
         <div id="navbar" class="flex flex-row justify-between items-center">
@@ -38,7 +38,7 @@ import Support from "../components/Support.astro";
           </button>
         </div>
         <!-- Dropdown Menu -->
-        <nav id="mobilmenu" x-show="showMenu" x-transition class="flex flex-col items-end text-custom-offwhite pt-4 pr-4 font-medium fixed right-0 z-50">
+        <nav id="mobilmenu" x-show="showMenu" x-transition class="flex flex-col items-end text-custom-offwhite pt-4 pr-4 font-medium fixed right-0 z-50 bg-custom-ocean">
           <ul class="w-full text-right">
             <li class="py-2"><a href="/" class="block w-full px-4 py-2 no-underline">Plastproblemet</a></li>
             <li class="py-2"><a href="/" class="block w-full px-4 py-2 no-underline">Om plastic change</a></li>
@@ -47,18 +47,30 @@ import Support from "../components/Support.astro";
         </nav>
       </div>
     </div>
-    <div class="pt-12 px-16 z-10 relative">
-      <h1 class="font-bebas text-custom-orange text-9xl mb-4">#singleusesucks</h1>
+
+    <div class="relative z-10 pt-12 px-8 sm:px-16 mt-8 pt-20">
+      <h1 class="font-bebas text-custom-orange text-6xl sm:text-7xl md:text-8xl lg:text-9xl mb-4">#singleusesucks</h1>
       <NaturalLanguageForm />
     </div>
-    <Image class="absolute z-0 w-[25%] animate__wobble animate__animated plasticanimation" style="animation-duration: 20s; left: 600px; top: 55%;" src={plasticbag} alt="plastic bag" />
-    <Image class="absolute z-0 w-[15%] animate__wobble animate__animated plasticanimation" style="animation-duration: 20s; left: 950px; top: 25%; transform: rotate(80deg)" src={plasticbag} alt="plastic bag" />
-    <Image class="absolute z-0 w-[20%] animate__wobble animate__animated plasticanimation" style="animation-duration: 20s; left: 30px; top: 60%; transform: rotate(100deg)" src={plasticbottle} alt="plastic bag" />
-    <Image class="absolute z-0 w-[10%]" style="animate__wobble animate__animated plasticanimation animation-duration: 20s; left: 1000px; top: 70%; transform: rotate(260deg)" src={plasticbottle} alt="plastic bag" />
-    <Image class="absolute z-0 w-[10%] h-auto max-w-none" style="animation-duration: 20s; left: 380px; top: 70%; transform: rotate(300deg)" src={plasticfork} alt="plastic bag" />
-    <Image class="absolute z-0 w-[7%] h-auto max-w-none" style="animation-duration: 20s; left: 900px; top: 60%; transform: rotate(10deg)" src={plasticfork} alt="plastic bag" />
-    <Image class="absolute z-0 w-[9%] h-auto max-w-none" style="animation-duration: 20s; left: 670px; top: 70%; transform: rotate(-30deg)" src={plasticspoon} alt="plastic bag" />
-    <Image class="absolute z-0 w-[9%] h-auto max-w-none opacity-70" style="animation-duration: 20s; left: 1150px; top: 60%; transform: rotate(-30deg)" src={plasticcup} alt="plastic bag" />
+
+    <!-- Herobilleder -->
+    <div class="absolute inset-0 grid grid-cols-12 grid-rows-6 gap-4">
+      <Image class="col-start-7 col-span-3 row-start-5 row-span-2 w-[20vw] h-auto animationwobble plasticanimation" style="animation-duration: 20s;" src={plasticbag} alt="plastic bag" />
+
+      <Image class="col-start-9 col-span-2 row-start-3 row-span-1 w-[16vw] h-auto animationwobble rotate-[90deg]" style="animation-duration: 20s;" src={plasticbag} alt="plastic bag" />
+
+      <Image class="col-start-1 col-span-3 row-start-5 row-span-1 w-[24vw] h-auto animationwobble rotate-[100deg]" style="animation-duration: 20s;" src={plasticbottle} alt="plastic bottle" />
+
+      <Image class="col-start-9 col-span-2 row-start-5 row-span-1 w-[18vw] h-auto animationwobble rotate-[260deg]" style="animation-duration: 20s;" src={plasticbottle} alt="plastic bottle" />
+
+      <Image class="col-start-4 col-span-2 row-start-5 row-span-1 w-[12vw] h-auto animationwobble rotate-[300deg]" style="animation-duration: 20s;" src={plasticfork} alt="plastic fork" />
+
+      <Image class="col-start-6 col-span-1 row-start-6 row-span-1 w-[14vw] h-auto animationwobble rotate-[90deg]" style="animation-duration: 20s;" src={plasticfork} alt="plastic fork" />
+
+      <Image class="col-start-6 col-span-1 row-start-5 row-span-1 w-[10vw] h-auto animationwobble rotate-[30deg]" style="animation-duration: 20s;" src={plasticspoon} alt="plastic spoon" />
+
+      <Image class="col-start-11 col-span-2 row-start-5 row-span-1 w-[8vw] h-auto opacity-70 animationwobble rotate-[30deg]" style="animation-duration: 20s;" src={plasticcup} alt="plastic cup" />
+    </div>
   </section>
 
   <Whale1 />
@@ -75,12 +87,17 @@ import Support from "../components/Support.astro";
   import { animate, stagger, inView, scroll, timeline } from "motion";
   scroll(animate(".progress-bar", { scaleX: [0, 1] }));
 
+  animate("body", { opacity: [0, 1] }, { duration: 1 });
+
   scroll(animate(".parallaxelement", { y: [0, 150] }), {
     target: document.querySelector(".parallaxelement"),
   });
 
-  const animation = document.querySelector(".plasticanimation");
-  inView(animation, () => {
-    animation.classList.add("animate__animated", "animate__delay-1s", "animate__infinite", "ease-in-out");
+  const animationwobble = document.querySelectorAll(".animationwobble");
+
+  animationwobble.forEach((item) => {
+    inView(item, () => {
+      item.classList.add("animate__animated", "animate__wobble", "animate__infinite", "animate__delay-1s", "ease-in-out");
+    });
   });
 </script>

@@ -5,18 +5,24 @@ import whalebag from "../assets/images/posehval.webp";
 import plasticbottle from "../assets/images/plastikflaske.webp";
 ---
 
-<section id="whale 1" class="pb-40 mb-48 w-screen overflow-clip">
-  <div class="md:grid grid-cols-2 gap-2 mx-16 relative z-10">
+<section id="whale1" class="pb-24 mb-40 w-screen relative">
+  <div class="md:grid grid-cols-2 gap-4 mx-8 md:mx-16 relative z-10">
     <div>
-      <h2 class="font-bebas text-custom-offwhite text-6xl mb-4 max-w-xxs">Skrald der <span class="text-custom-orange">aldrig</span> forsvinder</h2>
+      <h2 class="font-bebas text-custom-offwhite text-5xl sm:text-6xl max-w-xxs">Skrald der <span class="text-custom-orange">aldrig</span> forsvinder</h2>
     </div>
     <div class="parallaxelement">
-      <p class="max-w-lg text-custom-ocean bg-custom-lightblue opacity-75 px-8 py-8">Plastikforurening opstår, når plastikaffald ender i naturen og bliver der i årtier. Kun <strong>5% af plastikken</strong> flyder på overfladen, mens <strong>95% ligger dybere</strong> i vandsøjlen, hvilket gør det sværere at opdage.</p>
+      <p class="max-w-md md:max-w-lg text-custom-ocean bg-custom-lightblue opacity-75 px-4 sm:px-8 py-6 text-sm sm:text-base">
+        Plastikforurening opstår, når plastikaffald ender i naturen og bliver der i årtier. Kun <strong>5% af plastikken</strong> flyder på overfladen, mens <strong>95% ligger dybere</strong> i vandsøjlen, hvilket gør det sværere at opdage.
+      </p>
     </div>
   </div>
-  <Image class="absolute z-0 w-[180%] h-auto max-w-none" style="left: -350px; top: 55%;" src={bluewhale} alt="whale" />
-  <Image class="absolute z-0 w-[40%] opacity-80" style="left: 300px; top: 155%;" src={whalebag} alt="plastic bag" />
-  <Image class="absolute z-0 w-[20%] opacity-80" style="left: 700px; top: 160%;" src={plasticbottle} alt="plastic bottle" />
+
+  <!-- Billeder -->
+  <div class="grid grid-cols-4 grid-rows-3 gap-4 absolute inset-0 w-full h-full pointer-events-none">
+    <Image class="col-span-4 z-0 w-full h-auto -mt-32" src={bluewhale} alt="whale" />
+    <Image class="col-span-1 col-start-2 row-start-2 row-span-3 z-0 w-[25vw] opacity-80 animate__pulse animate__animated plasticanimation" style="animation-duration: 6s;" src={whalebag} alt="plastic bag" />
+    <Image class="col-span-1 col-start-3 row-start-3 row-span-3 z-0 w-[20vw] opacity-80 animate__pulse animate__animated plasticanimation" style="animation-duration: 6s;" src={plasticbottle} alt="plastic bottle" />
+  </div>
 </section>
 
 <script>
@@ -25,5 +31,13 @@ import plasticbottle from "../assets/images/plastikflaske.webp";
 
   scroll(animate(".parallaxelement", { y: [0, 150] }), {
     target: document.querySelector(".parallaxelement"),
+  });
+
+  const animations = document.querySelectorAll(".plasticanimation");
+
+  animations.forEach((item) => {
+    inView(item, () => {
+      item.classList.add("animate__animated", "animate__pulse", "animate__infinite", "animate__delay-1s", "ease-in-out");
+    });
   });
 </script>
