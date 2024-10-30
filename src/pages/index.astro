@@ -188,10 +188,10 @@ import plastikkopgennemsigtig from "../assets/images/plastikkopgennemsigtig.webp
 
   <section id="whale 2" class="mx-16 mb-8 relative">
     <div class="z-10">
-    <p class="max-w-lg text-custom-ocean bg-custom-lightblue opacity-75 px-8 py-8">Plastic Change har som mission at skabe handling lokalt, nationalt og globalt. Vi sætter fokus på plastikudfordringerne gennem mobilisering, vidensdeling og samarbejde med befolkning, erhvervsliv og politikere.</p>
-    <br />
-    <p class="max-w-lg text-custom-ocean bg-custom-lightblue opacity-75 px-8 py-8">Vores vision er et miljø uden plastikforurening, så kommende generationer kan nyde havets ressourcer uden risiko for plastikindhold.</p>
-  </div>
+      <p class="max-w-lg text-custom-ocean bg-custom-lightblue opacity-75 px-8 py-8">Plastic Change har som mission at skabe handling lokalt, nationalt og globalt. Vi sætter fokus på plastikudfordringerne gennem mobilisering, vidensdeling og samarbejde med befolkning, erhvervsliv og politikere.</p>
+      <br />
+      <p class="max-w-lg text-custom-ocean bg-custom-lightblue opacity-75 px-8 py-8">Vores vision er et miljø uden plastikforurening, så kommende generationer kan nyde havets ressourcer uden risiko for plastikindhold.</p>
+    </div>
     <div class="overflow-hidden"><Image class="absolute z-0 w-[180%] h-auto max-w-none" style="left: -500px; top: -100%;" src={whaleleft} alt="whale" /></div>
   </section>
 
@@ -268,8 +268,8 @@ import plastikkopgennemsigtig from "../assets/images/plastikkopgennemsigtig.webp
     </div>
   </section>
 
-  <section id="support" class="relative">
-    <div class="grid grid-cols-2 mx-16 pt-32 relative z-10">
+  <section class="relative" id="support">
+    <div class="grid grid-cols-2 mx-16 pt-32">
       <div class="max-w-xs text-custom-offwhite">
         <h2 class="text-5xl font-bebas pb-8 max-w-xxs">
           DIT BIDRAG GØR EN <span class="text-custom-orange">FORSKEL</span>
@@ -277,19 +277,31 @@ import plastikkopgennemsigtig from "../assets/images/plastikkopgennemsigtig.webp
         <p class="mb-4">Du kan <strong>beskytte</strong> naturen, dyrelivet og vores børn mod plastik.</p>
         <p>Kun med din <strong>støtte</strong> kan vi kæmpe for, at politikere og virksomheder tager ansvar for at standse overproduktion og <strong>forurening</strong> fra plastik nu og at vi kan uddanne fremtidens forbrugere.</p>
       </div>
-
-      <div class="bg-custom-lightblue opacity-75 p-8">
-        <p>JEG VIL STØTTE</p>
+      <!-- form -->
+      <div class="bg-custom-lightblue opacity-75 rounded-2xl w-[27rem] h-[30rem] p-10">
+        <p class="text-3xl font-bebas mb-12 text-custom-darkblue">JEG VIL STØTTE</p>
         <form>
-          <div>
-            <input type="radio" id="maanedligt" name="betaling" checked="checked" />
-            <label for="maanedligt">Månedligt</label>
-            <input type="radio" id="enkelt" name="betaling" />
-            <label for="enkelt">En enkelt gang</label>
+          <div class="mb-8 flex gap-10">
+            <label class="flex items-center space-x-2 cursor-pointer">
+              <input type="radio" id="maanedligt" name="betaling" checked class="hidden peer" />
+              <span class="w-5 h-5 border-2 border-custom-darkblue rounded-full peer-checked:bg-custom-darkblue peer-checked:border-custom-darkblue"></span>
+              <span class="text-lg">Månedligt</span>
+            </label>
+            <label class="flex items-center space-x-2 cursor-pointer">
+              <input type="radio" id="enkelt" name="betaling" class="hidden peer" />
+              <span class="w-5 h-5 border-2 border-custom-darkblue rounded-full peer-checked:bg-custom-darkblue peer-checked:border-custom-darkblue"></span>
+              <span class="text-lg">En enkelt gang</span>
+            </label>
           </div>
-          <div class="flex flex-col space-y-4 mt-4">
-            <button class="text-black border border-black py-2 px-4 hover:bg-black transition duration-300">Andet beløb</button>
-            <button class="bg-black text-white py-2 max-w-sm hover:bg-gray-800 transition duration-300">Støt nu</button>
+          <div class="flex space-x-4 mt-6 mb-4 items-center gap-8">
+            <button type="button" class="bg-transparent text-custom-darkblue border border-custom-darkblue rounded-full py-6 px-7 text-lg hover:bg-custom-darkblue hover:text-custom-offwhite transition duration-300">50</button>
+            <button type="button" class="bg-transparent text-custom-darkblue border border-custom-darkblue rounded-full py-6 px-7 text-lg hover:bg-custom-darkblue hover:text-custom-offwhite transition duration-300">75</button>
+            <button type="button" class="bg-transparent text-custom-darkblue border border-custom-darkblue rounded-full py-6 px-6 text-lg hover:bg-custom-darkblue hover:text-custom-offwhite transition duration-300">125</button>
+          </div>
+
+          <div class="flex flex-col space-y-4 mt-8">
+            <input type="text" id="customAmount" placeholder="Andet beløb" class="bg-transparent border border-custom-darkblue text-custom-darkblue text-center text-lg focus:outline-none focus:ring-2 focus:ring-custom-darkblue transition duration-300" />
+            <button type="button" class="bg-custom-darkblue text-lg text-custom-offwhite py-2 hover:bg-gray-800 transition duration-300">STØT NU</button>
           </div>
         </form>
       </div>
@@ -309,18 +321,18 @@ import plastikkopgennemsigtig from "../assets/images/plastikkopgennemsigtig.webp
   <!-- <Button>Klik!</Button>
   <p>Link til <Link href="https://www.kea.dk" target="_blank">En anden side</Link></p>
   <Image src={tommel} alt="" /> -->
+
+  <script>
+    import { animate, stagger, inView, scroll, timeline } from "motion";
+    scroll(animate(".progress-bar", { scaleX: [0, 1] }));
+
+    scroll(animate(".parallaxelement", { y: [0, 150] }), {
+      target: document.querySelector(".parallaxelement"),
+    });
+
+    const animation = document.querySelector(".plasticanimation");
+    inView(animation, () => {
+      animation.classList.add("animate__animated", "animate__delay-1s", "animate__infinite", "ease-in-out");
+    });
+  </script>
 </MainLayout>
-
-<script>
-  import { animate, stagger, inView, scroll, timeline } from "motion";
-  scroll(animate(".progress-bar", { scaleX: [0, 1] }));
-
-  scroll(animate(".parallaxelement", { y: [0, 150] }), {
-    target: document.querySelector(".parallaxelement"),
-  });
-
-  const animation = document.querySelector(".plasticanimation");
-  inView(animation, () => {
-    animation.classList.add("animate__animated", "animate__delay-1s", "animate__infinite", "ease-in-out");
-  });
-</script>

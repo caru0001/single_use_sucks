@@ -1,6 +1,10 @@
 ---
 import Image from "astro/components/Image.astro";
-import facebook from "../assets/images/Facebook.svg"
+import facebook from "../assets/images/Facebook.svg";
+import instagram from "../assets/images/instagram.svg";
+import twitter from "../assets/images/twitter.svg";
+import linkedin from "../assets/images/linkedin.svg";
+import youtube from "../assets/images/youtube.svg";
 ---
 
 <div class="text-custom-offwhite px-16 grid grid-cols-2 pt-72 w-full h-screen bg-cover bg-custom-darkblue bg-center bg-[url('/havbunden.webp')]">
@@ -8,14 +12,32 @@ import facebook from "../assets/images/Facebook.svg"
     <div>
       <p class="text-2xl font-bold mb-2">Bliv en del af forandringen</p>
       <p class="text-xl">Tilmeld dig vores nyhedsbrev</p>
-      <p class="text-xl pt-14">Følg <strong>Plastic Change</strong> på sociale medier</p>
-      <Image src={facebook} alt="" />
+      <p class="text-xl pt-14 mb-4">Følg <strong>Plastic Change</strong> på sociale medier</p>
+      <div class="flex flex-row gap-3">
+        <a href="https://www.facebook.com/plasticchange/" target="_blank" rel="noopener noreferrer">
+          <Image src={facebook} alt="Facebook" class="w-14 h-14" />
+        </a>
+        <a href="https://www.instagram.com/plasticchange" target="_blank" rel="noopener noreferrer">
+          <Image src={instagram} alt="Instagram" class="w-14 h-14" />
+        </a>
+        <a href="https://x.com/plasticchange" target="_blank" rel="noopener noreferrer">
+          <Image src={twitter} alt="Twitter" class="w-14 h-14" />
+        </a>
+        <a href="https://www.linkedin.com/company/plastic-change/" target="_blank" rel="noopener noreferrer">
+          <Image src={linkedin} alt="LinkedIn" class="w-14 h-14" />
+        </a>
+        <a href="https://www.youtube.com/channel/UCgLD-akVpdrJPPds2qoNA8g" target="_blank" rel="noopener noreferrer">
+          <Image src={youtube} alt="YouTube" class="w-14 h-14" />
+        </a>
+      </div>
     </div>
   </div>
   <div class="flex gap-4">
     <div>
-    <input type="email" id="email2" name="email" placeholder="E-mail" aria-label="Indtast din e-mail" class="px-12 py-4 text-custom-ocean text-center" /></div>
+      <input type="email" id="email2" name="email" placeholder="E-mail" aria-label="Indtast din e-mail" class="px-12 py-4 text-custom-ocean text-center" />
+    </div>
     <div>
-    <input type="submit" id="subscribe2" value="Tilmeld" class="text-custom-offwhite bg-custom-green border border-custom-green py-4 px-12 text-center cursor-pointer transition duration-300" /></div>
+      <input type="submit" id="subscribe2" value="Tilmeld" class="text-custom-offwhite bg-custom-green border border-custom-green py-4 px-12 text-center cursor-pointer transition duration-300" />
+    </div>
   </div>
 </div>
