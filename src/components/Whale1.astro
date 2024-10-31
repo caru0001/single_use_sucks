@@ -5,7 +5,7 @@ import whalebag from "../assets/images/posehval.webp";
 import plasticbottle from "../assets/images/plastikflaske.webp";
 ---
 
-<section id="whale1" class="pb-24 mb-40 w-screen relative">
+<section id="whale1" class="pb-24 mb-40 relative w-full h-screen bg-cover bg-center bg-[url('/whalebackground1.webp')]">
   <div class="md:grid grid-cols-2 gap-4 mx-8 md:mx-16 relative z-10">
     <div>
       <h2 class="font-bebas text-custom-offwhite text-5xl sm:text-6xl max-w-xxs">Skrald der <span class="text-custom-orange">aldrig</span> forsvinder</h2>
@@ -19,9 +19,9 @@ import plasticbottle from "../assets/images/plastikflaske.webp";
 
   <!-- Billeder -->
   <div class="grid grid-cols-4 grid-rows-3 gap-4 absolute inset-0 w-full h-full pointer-events-none">
-    <Image class="col-span-4 z-0 w-full h-auto -mt-32" src={bluewhale} alt="whale" />
-    <Image class="col-span-1 col-start-2 row-start-2 row-span-3 z-0 w-[25vw] opacity-80 animate__pulse animate__animated plasticanimation" style="animation-duration: 6s;" src={whalebag} alt="plastic bag" />
-    <Image class="col-span-1 col-start-3 row-start-3 row-span-3 z-0 w-[20vw] opacity-80 animate__pulse animate__animated plasticanimation" style="animation-duration: 6s;" src={plasticbottle} alt="plastic bottle" />
+    <!-- <Image class="col-span-4 z-0 w-full h-auto -mt-32" src={bluewhale} alt="whale" />-->
+    <Image class="col-span-1 col-start-2 row-start-2 row-span-3 z-0 w-[25vw] opacity-80 animate__pulse animate__animated plasticanimation" style="animation-duration: 20s;" src={whalebag} alt="plastic bag" />
+    <Image class="col-span-1 col-start-3 row-start-3 row-span-3 z-0 w-[20vw] opacity-80 animate__pulse animate__animated plasticanimation" style="animation-duration: 20s;" src={plasticbottle} alt="plastic bottle" />
   </div>
 </section>
 
@@ -37,7 +37,7 @@ import plasticbottle from "../assets/images/plastikflaske.webp";
 
   animations.forEach((item) => {
     inView(item, () => {
-      item.classList.add("animate__animated", "animate__pulse", "animate__infinite", "animate__delay-1s", "ease-in-out");
+      item.classList.add("animate__animated", "animate__wobble", "animate__infinite", "animate__delay-1s", "ease-in-out");
     });
   });
 </script>
