@@ -2,23 +2,22 @@
 
 ---
 
-<h2 class="font-poppins text-custom-offwhite text-4xl max-w-4xl leading-relaxed font-medium z-10">
+<div id="natural language form" class="relative z-10"></div>
+<h2 class="font-poppins text-custom-offwhite text-3xl sm:text-4xl max-w-4xl leading-relaxed sm:leading-loose font-medium">
   Ja, jeg vil hjælpe <span>
-    <select class="border-b-2 border-dotted bg-transparent text-custom-orange font-poppins text-4xl">
-      <option class="">månedligt</option>
-      <option>en enkelt gang</option>
+    <select class="border-b-2 border-dotted border-custom-offwhite bg-transparent text-custom-orange font-poppins text-3xl sm:text-4xl">
+      <option class="bg-custom-ocean">månedligt</option>
+      <option class="bg-custom-ocean">en enkelt gang</option>
     </select>
   </span>
   med at stoppe plastikforurening med
   <span>
-    <select class="border-b-2 border-dotted bg-transparent text-custom-orange font-poppins text-4xl">
-      <option class="">75 kr.</option>
-      <option>50 kr.</option>
-      <option>125 kr.</option>
+    <select class="border-b-2 border-dotted border-custom-offwhite bg-transparent text-custom-orange font-poppins text-3xl sm:text-4xl">
+      <option class="bg-custom-ocean">75 kr.</option>
+      <option class="bg-custom-ocean">50 kr.</option>
+      <option class="bg-custom-ocean">125 kr.</option>
     </select>
   </span>
 </h2>
 
-<div class="mt-8 z-10">
-  <button type="submit" class="bg-custom-green font-poppins px-10 py-2 uppercase text-custom-offwhite font-bold shadow-lg opacity-90" @click="alert('Mange tak for din støtte! Dit bidrag gør en stor forskel i kampen mod single use plastik og plastikforurening.')">Gør en forskel</button>
-</div>
+<button type="submit" class="bg-custom-green font-poppins px-10 py-2 uppercase text-custom-offwhite font-bold shadow-lg opacity-90 mt-8" @click="alert('Mange tak for din støtte! Dit bidrag gør en stor forskel i kampen mod single use plastik og plastikforurening.')">Gør en forskel</button>
