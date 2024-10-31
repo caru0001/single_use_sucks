@@ -18,7 +18,7 @@ import Support from "../components/Support.astro";
 ---
 
 <MainLayout title="#singleusesucks">
-  <section id="hero" class="w-full h-screen bg-cover bg-center bg-[url('/hero_background.webp')] pb-24 mb-8 sm:mb-32 md:mb-40 lg:mb-48 relative grid grid-rows-1 grid-cols-1">
+  <section id="hero" class="w-full h-[80vh] md:h-[80vh] bg-cover bg-center bg-[url('/hero_background.webp')] pb-24 mb-8 sm:mb-32 md:mb-40 lg:mb-48 relative grid grid-rows-1 grid-cols-1">
     <div class="pt-4">
       <div x-data="{ showMenu: false }" class="px-8 pb-2 pt-2 w-full">
         <div id="navbar" class="flex flex-row justify-between items-center">
@@ -48,8 +48,8 @@ import Support from "../components/Support.astro";
       </div>
     </div>
 
-    <div id="herocontent" class="pt-4">
-      <div class="relative z-10 px-8 sm:px-16 mt-8">
+    <div id="herocontent" class="pt-40">
+      <div class="relative z-10 px-8 sm:px-16">
         <h1 class="font-bebas text-custom-orange text-6xl sm:text-7xl md:text-8xl lg:text-9xl mb-4">#singleusesucks</h1>
         <NaturalLanguageForm />
       </div>
@@ -72,7 +72,6 @@ import Support from "../components/Support.astro";
 
         <Image class="col-start-11 col-span-2 row-start-5 row-span-1 w-[8vw] h-auto opacity-70 animationwobble rotate-[30deg]" style="animation-duration: 20s;" src={plasticcup} alt="plastic cup" />
       </div>
-
     </div>
   </section>
 
