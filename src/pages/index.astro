@@ -28,7 +28,11 @@ import Support from "../components/Support.astro";
             </a>
           </div>
           <div class="z-10 mr-10">
-            <button type="submit" class="bg-custom-green font-poppins px-10 py-2 uppercase text-custom-offwhite font-bold shadow-lg opacity-90" @click="alert('Mange tak for din støtte! Dit bidrag gør en stor forskel i kampen mod single use plastik og plastikforurening.')">Støt nu</button>
+           <a href="#support" class="bg-custom-green font-poppins px-10 py-2 uppercase text-custom-offwhite font-bold shadow-lg opacity-90">
+  Støt nu
+</a>
+
+
           </div>
           <!-- Burger menu -->
           <button id="burgermenu" class="mr-4 fixed right-0 z-50" @click="showMenu = !showMenu">
@@ -38,13 +42,21 @@ import Support from "../components/Support.astro";
           </button>
         </div>
         <!-- Dropdown Menu -->
-        <nav id="mobilmenu" x-show="showMenu" x-transition class="flex flex-col items-end text-custom-offwhite pt-4 pr-4 font-medium fixed right-0 z-50 bg-custom-ocean">
-          <ul class="w-full text-right">
-            <li class="py-2"><a href="/" class="block w-full px-4 py-2 no-underline">Plastproblemet</a></li>
-            <li class="py-2"><a href="/" class="block w-full px-4 py-2 no-underline">Om plastic change</a></li>
-            <li class="py-2"><a href="/form" class="block w-full px-4 py-2 no-underline">Hvad kan du gøre?</a></li>
-          </ul>
-        </nav>
+    <nav id="mobilmenu" x-show="showMenu" x-transition class="flex flex-col items-end text-custom-offwhite pt-4 pr-4 font-medium fixed right-0 z-50 bg-custom-ocean">
+  <ul class="w-full text-left"> <!-- Skiftet fra text-right til text-left -->
+    <li class="py-2">
+      <a href="#whale1" class="block w-full px-4 py-2 no-underline">Plastproblemet</a>
+    </li>
+    <li class="py-2">
+      <a href="#whale2" class="block w-full px-4 py-2 no-underline">Om plastic change</a>
+    </li>
+    <li class="py-2">
+      <a href="#turtle" class="block w-full px-4 py-2 no-underline">Hvad kan du gøre?</a>
+    </li>
+  </ul>
+</nav>
+
+
       </div>
     </div>
 
