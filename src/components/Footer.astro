@@ -7,37 +7,48 @@ import linkedin from "../assets/images/linkedin.svg";
 import youtube from "../assets/images/youtube.svg";
 ---
 
-<div class="text-custom-offwhite px-16 grid grid-cols-2 pt-72 w-full h-screen bg-cover bg-center bg-[url('/havbunden.webp')]">
-  <div>
-    <div>
-      <p class="text-2xl font-bold mb-2">Bliv en del af forandringen</p>
-      <p class="text-xl">Tilmeld dig vores nyhedsbrev</p>
-      <p class="text-xl pt-14 mb-4">Følg <strong>Plastic Change</strong> på sociale medier</p>
-      <div class="flex flex-row gap-3">
-        <a href="https://www.facebook.com/plasticchange/" target="_blank" rel="noopener noreferrer">
-          <Image src={facebook} alt="Facebook" class="w-14 h-14" />
-        </a>
-        <a href="https://www.instagram.com/plasticchange" target="_blank" rel="noopener noreferrer">
-          <Image src={instagram} alt="Instagram" class="w-14 h-14" />
-        </a>
-        <a href="https://x.com/plasticchange" target="_blank" rel="noopener noreferrer">
-          <Image src={twitter} alt="Twitter" class="w-14 h-14" />
-        </a>
-        <a href="https://www.linkedin.com/company/plastic-change/" target="_blank" rel="noopener noreferrer">
-          <Image src={linkedin} alt="LinkedIn" class="w-14 h-14" />
-        </a>
-        <a href="https://www.youtube.com/channel/UCgLD-akVpdrJPPds2qoNA8g" target="_blank" rel="noopener noreferrer">
-          <Image src={youtube} alt="YouTube" class="w-14 h-14" />
-        </a>
-      </div>
+<div class="text-custom-offwhite px-4 sm:px-8 md:px-16 grid grid-cols-1 md:grid-cols-2 pt-24 md:pt-72 w-full h-auto md:h-screen bg-cover bg-center bg-[url('/havbunden.webp')]">
+    <div class="mb-8 md:mb-0">
+        <p class="text-lg md:text-2xl font-bold mb-2">Bliv en del af forandringen</p>
+        <p class="text-base md:text-xl">Tilmeld dig vores nyhedsbrev</p>
+        
+        <!-- Input felter for mobil -->
+        <div class="flex flex-col gap-4 items-center mt-4 md:hidden">
+            <div class="w-full">
+                <input type="email" id="email-mobile" name="email" placeholder="E-mail" aria-label="Indtast din e-mail" class="w-full px-8 py-3 text-custom-ocean text-center" />
+            </div>
+            <div class="w-full">
+                <input type="submit" id="subscribe-mobile" value="Tilmeld" class="w-full text-custom-offwhite bg-custom-green border border-custom-green py-3 px-8 text-center cursor-pointer transition duration-300" />
+            </div>
+        </div>
+
+        <p class="text-base md:text-xl pt-10 md:pt-14 mb-4">Følg <strong>Plastic Change</strong> på sociale medier</p>
+        <div class="flex flex-wrap gap-3 md:justify-start">
+            <a href="https://www.facebook.com/plasticchange/" target="_blank" rel="noopener noreferrer">
+                <Image src={facebook} alt="Facebook" class="w-10 h-10 md:w-14 md:h-14" />
+            </a>
+            <a href="https://www.instagram.com/plasticchange" target="_blank" rel="noopener noreferrer">
+                <Image src={instagram} alt="Instagram" class="w-10 h-10 md:w-14 md:h-14" />
+            </a>
+            <a href="https://x.com/plasticchange" target="_blank" rel="noopener noreferrer">
+                <Image src={twitter} alt="Twitter" class="w-10 h-10 md:w-14 md:h-14" />
+            </a>
+            <a href="https://www.linkedin.com/company/plastic-change/" target="_blank" rel="noopener noreferrer">
+                <Image src={linkedin} alt="LinkedIn" class="w-10 h-10 md:w-14 md:h-14" />
+            </a>
+            <a href="https://www.youtube.com/channel/UCgLD-akVpdrJPPds2qoNA8g" target="_blank" rel="noopener noreferrer">
+                <Image src={youtube} alt="YouTube" class="w-10 h-10 md:w-14 md:h-14" />
+            </a>
+        </div>
     </div>
-  </div>
-  <div class="flex gap-4">
-    <div>
-      <input type="email" id="email2" name="email" placeholder="E-mail" aria-label="Indtast din e-mail" class="px-12 py-4 text-custom-ocean text-center" />
+
+    <!-- Input felter for desktop -->
+    <div class="hidden md:flex gap-4">
+        <div class="w-full md:w-auto">
+            <input type="email" id="email2" name="email" placeholder="E-mail" aria-label="Indtast din e-mail" class="px-12 py-4 text-custom-ocean text-center" />
+        </div>
+        <div class="w-full md:w-auto">
+            <input type="submit" id="subscribe2" value="Tilmeld" class="text-custom-offwhite bg-custom-green border border-custom-green py-4 px-12 text-center cursor-pointer transition duration-300" />
+        </div>
     </div>
-    <div>
-      <input type="submit" id="subscribe2" value="Tilmeld" class="text-custom-offwhite bg-custom-green border border-custom-green py-4 px-12 text-center cursor-pointer transition duration-300" />
-    </div>
-  </div>
 </div>
