@@ -3,24 +3,33 @@ import { Image } from "astro:assets";
 import jellyfish from "../assets/images/jellyfish.webp";
 ---
 
-<section id="piechart" class="mx-16 mb-40 relative mt-48">
-  <div class="grid grid-cols-3 gap-4 relative z-10">
-    <div class="text-custom-offwhite max-w-xs">
-      <div class="bg-custom-lightblue w-[6rem] h-[20rem] m-auto opacity-75"><h3 class="text-custom-darkblue text-center">70%</h3></div>
-      <p class="font-bold mt-6">Hav- og miljøindsatser (70%)</p>
-      <p>Størstedelen af din støtte går til at mindske plastikforurening gennem oplysning, events, undervisning og mobilisering af Plastic Changer-bevægelsen. Vi leder også årlige natur-oprydninger globalt og arbejder politisk for bedre miljølovgivning.</p>
+<section id="stagger" class="mx-16 mb-96 relative mt-96">
+  <div class="grid grid-cols-3 relative z-10 place-items-center">
+    <div class="bg-custom-lightblue w-[8rem] h-[30rem] m-auto opacity-75 flex flex-col justify-end mb-6 staggeranimation">
+      <h3 class="text-custom-darkblue text-center text-3xl font-semibold">70%</h3>
     </div>
 
-    <div class="text-custom-offwhite max-w-xs">
-      <div class="bg-custom-lightblue w-[6rem] h-[20rem] m-auto opacity-75"><h3 class="text-custom-darkblue text-center">70%</h3></div>
-      <p class="font-bold mt-6">Fundraising og indsamlinger (22%)</p>
-      <p>En mindre del går til fundraising og indsamlinger, så Plastic Changer bevægelsen kan blive ved med at vokse.</p>
+    <div class="bg-custom-lightblue w-[8rem] h-[20rem] m-auto opacity-75 flex flex-col justify-end mb-6 staggeranimation">
+      <h3 class="text-custom-darkblue text-center text-3xl font-semibold">22%</h3>
     </div>
 
-    <div class="text-custom-offwhite max-w-xs">
-      <div class="bg-custom-lightblue w-[6rem] h-[20rem] m-auto opacity-75"><h3 class="text-custom-darkblue text-center">70%</h3></div>
-      <p class="font-bold mt-6">Projektstyring og administration (8%)</p>
-      <p>En lille del til administration, og til at give Plastic Change et sted at bo.</p>
+    <div class="bg-custom-lightblue w-[8rem] h-[10rem] m-auto opacity-75 flex flex-col justify-end mb-6 staggeranimation">
+      <h3 class="text-custom-darkblue text-center text-3xl font-semibold">8%</h3>
+    </div>
+  </div>
+
+  <div class="md:grid grid-cols-3 relative z-10 place-items-center">
+    <div class="text-custom-offwhite md:max-w-xs">
+      <p class="font-semibold">Hav- og miljøindsatser (70%)</p>
+      <p class="mb-4">70% går til at mindske plastikforurening gennem events, undervisning, oplysning og mobilisering af Plastic Changer-bevægelsen. Vi udfører også årlige oprydninger globalt for at rense vores hav og strande.</p>
+    </div>
+    <div class="text-custom-offwhite md:max-w-xs">
+      <p class="font-semibold">Hav- og miljøindsatser (70%)</p>
+      <p class="mb-4">70% går til at mindske plastikforurening gennem events, undervisning, oplysning og mobilisering af Plastic Changer-bevægelsen. Vi udfører også årlige oprydninger globalt for at rense vores hav og strande.</p>
+    </div>
+    <div class="text-custom-offwhite md:max-w-xs">
+      <p class="font-semibold">Hav- og miljøindsatser (70%)</p>
+      <p class="mb-4">70% går til at mindske plastikforurening gennem events, undervisning, oplysning og mobilisering af Plastic Changer-bevægelsen. Vi udfører også årlige oprydninger globalt for at rense vores hav og strande.</p>
     </div>
   </div>
 
@@ -34,3 +43,17 @@ import jellyfish from "../assets/images/jellyfish.webp";
     <Image src={jellyfish} alt="jellyfish" />
   </div>
 </section>
+
+<!-- <script>
+  import { inView, animate, stagger } from "motion";
+
+  inView("#stagger", () => {
+    animate(
+      ".staggeranimation",
+      { opacity: [0, 1] },
+      {
+        delay: stagger(1, { start: 2 }),
+      }
+    );
+  });
+</script> -->
