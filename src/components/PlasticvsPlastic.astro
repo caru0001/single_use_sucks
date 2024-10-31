@@ -8,11 +8,11 @@ import plastiskkopfarvet from "../assets/images/plastikkopfarvet.webp";
 import plastikkopgennemsigtig from "../assets/images/plastikkopgennemsigtig.webp";
 ---
 
-<section id="plasticvsplastic" class="mt-40 relative">
-  <div class="mx-16 relative z-10 grid grid-cols-2 gap-8 text-center h-screen items-center">
+<section id="plasticvsplastic" class="relative">
+  <div class="mx-16 relative z-10 grid grid-cols-1 md:grid-cols-2 gap-8 text-center h-screen items-center">
     <!-- Venstre kolonne -->
     <div>
-      <div class="mb-40">
+      <div class="mb-20 md:mb-40">
         <h2 class="font-bebas text-custom-offwhite text-5xl leading-none">
           SYNLIG PLASTIK<br />FORURENING
         </h2>
@@ -25,7 +25,7 @@ import plastikkopgennemsigtig from "../assets/images/plastikkopgennemsigtig.webp
 
     <!-- Højre kolonne -->
     <div>
-      <div class="mb-40">
+      <div class="mb-20 md:mb-40">
         <h2 class="font-bebas text-custom-offwhite text-5xl leading-none">
           USYNLIG PLASTIK<br />FORURENING
         </h2>
@@ -37,25 +37,60 @@ import plastikkopgennemsigtig from "../assets/images/plastikkopgennemsigtig.webp
     </div>
   </div>
 
-  <!-- Billeder i venstre kolonne -->
-  <div class="absolute w-[25%] h-auto opacity-100 z-0" style="left: 15%; top: 20%; transform: rotate(-40deg);">
-    <Image src={plastikposesort} alt="sort plastikpose" />
-  </div>
-  <div class="absolute w-[14%] h-auto opacity-80 z-0" style="left: 15%; top: 50%; transform: rotate(-45deg);">
-    <Image src={plastiskkopfarvet} alt="farvet plastikkop" />
-  </div>
-  <div class="absolute w-[13%] h-auto opacity-80 z-0" style="left: 28%; top: 48%; transform: rotate(-110deg);">
-    <Image src={plastikkopgennemsigtig} alt="gennemsigtig plastikkop" />
-  </div>
+  <div class="plasticelementinview md:block hidden">
+    <div class="absolute w-[25%] h-auto opacity-100 z-0 plasticelement1" style="left: 15%; top: 20%; transform: rotate(-40deg);">
+      <Image src={plastikposesort} alt="sort plastikpose" />
+    </div>
+    <div class="absolute w-[14%] h-auto opacity-80 z-0 plasticelement2" style="left: 15%; top: 50%; transform: rotate(-45deg);">
+      <Image src={plastiskkopfarvet} alt="farvet plastikkop" />
+    </div>
+    <div class="absolute w-[13%] h-auto opacity-80 z-0 plasticelement3" style="left: 28%; top: 48%; transform: rotate(-110deg);">
+      <Image src={plastikkopgennemsigtig} alt="gennemsigtig plastikkop" />
+    </div>
 
-  <!-- Billeder i højre kolonne -->
-  <div class="absolute w-[70%] h-auto opacity-80 z-0" style="right: -30%; top: 30%; transform: rotate(10deg);">
-    <Image src={mikroplast1} alt="mikroplast 1" />
-  </div>
-  <div class="absolute w-[70%] h-auto opacity-80 z-0" style="right: -35%; top: 25%; transform: rotate(-15deg);">
-    <Image src={mikroplast2} alt="mikroplast 2" />
-  </div>
-  <div class="absolute w-[70%] h-auto opacity-80 z-0" style="right: -30%; top: 40%; transform: rotate(5deg);">
-    <Image src={mikroplast3} alt="mikroplast 3" />
+    <div class="absolute w-[70%] h-auto opacity-80 z-0 plasticelement4" style="right: -30%; top: 30%; transform: rotate(10deg);">
+      <Image src={mikroplast1} alt="mikroplast 1" />
+    </div>
+    <div class="absolute w-[70%] h-auto opacity-80 z-0 plasticelement5" style="right: -35%; top: 25%; transform: rotate(-15deg);">
+      <Image src={mikroplast2} alt="mikroplast 2" />
+    </div>
+    <div class="absolute w-[70%] h-auto opacity-80 z-0 plasticelement6" style="right: -30%; top: 40%; transform: rotate(5deg);">
+      <Image src={mikroplast3} alt="mikroplast 3" />
+    </div>
   </div>
 </section>
+
+<script>
+  import { animate, inView } from "motion";
+
+  inView(".plasticelementinview", () => {
+    animate(".plasticelement1", { x: [-2000, 0], y: [-50, 0] }, { duration: 1 });
+    animate(".plasticelement2", { x: [-1500, 0], y: [-100, 0] }, { duration: 3 });
+    animate(".plasticelement3", { x: [-1000, 0], y: [-150, 0] }, { duration: 3 });
+    animate(".plasticelement4", { x: [1750, 0] }, { duration: 2 });
+    animate(".plasticelement5", { x: [2000, 0], y: [-100, 0] }, { duration: 1 });
+    animate(".plasticelement6", { x: [1000, 0] }, { duration: 2 });
+    return () => {
+      animate(".plasticelement1", { x: [-2000, 0], y: [-50, 0] }, { duration: 1 });
+      animate(".plasticelement2", { x: [-1500, 0], y: [-100, 0] }, { duration: 3 });
+      animate(".plasticelement3", { x: [-1000, 0], y: [-150, 0] }, { duration: 3 });
+      animate(".plasticelement4", { x: [1750, 0] }, { duration: 2 });
+      animate(".plasticelement5", { x: [2000, 0], y: [-100, 0] }, { duration: 1 });
+      animate(".plasticelement6", { x: [1000, 0] }, { duration: 2 });
+    };
+  });
+</script>
+
+<!-- <script>
+  import { animate, inView } from "motion";
+
+
+  inView(".plasticelementinview", () => {
+    animate(".plasticelement1", { x: [-2000, 0], y: [-50, 0] }, { duration: 1 });
+    animate(".plasticelement2", { x: [-1500, 0], y: [-100, 0] }, { duration: 3 });
+    animate(".plasticelement3", { x: [-1000, 0], y: [-150, 0] }, { duration: 3 });
+    animate(".plasticelement4", { x: [1750, 0] }, { duration: 2 });
+    animate(".plasticelement5", { x: [-2000, 0], y: [-100, 0] }, { duration: 1 });
+    animate(".plasticelement6", { x: [2000, 0] }, { duration: 2 });
+  });
+</script> -->
