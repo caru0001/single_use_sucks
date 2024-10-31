@@ -18,50 +18,45 @@ import Support from "../components/Support.astro";
 ---
 
 <MainLayout title="#singleusesucks">
-  <section id="hero" class="w-full h-[80vh] bg-cover bg-center bg-[url('/hero_background.webp')] pb-24 mb-8 sm:mb-32 md:mb-40 lg:mb-48 relative grid grid-rows-1 grid-cols-1">
+  <section id="hero" class="w-full h-[80vh] bg-cover bg-center bg-[url('/oceanbackground.webp')] pb-24 mb-8 sm:mb-32 md:mb-40 lg:mb-48 relative grid grid-rows-1 grid-cols-1">
     <div class="pt-4">
-      <div x-data="{ showMenu: false }" class="px-8 pb-2 pt-2 w-full">
+      <div x-data="{ showMenu: false }" class="px-4 sm:px-8 md:px-16 pb-2 pt-2 w-full">
         <div id="navbar" class="flex flex-row justify-between items-center">
           <div id="logo" class="flex items-center py-2">
             <a href="/">
               <p class="text-custom-offwhite">plastic change</p>
             </a>
           </div>
-          <div class="z-10 mr-10">
-           <a href="#support" class="bg-custom-green font-poppins px-10 py-2 uppercase text-custom-offwhite font-bold shadow-lg opacity-90">
-  Støt nu
-</a>
-
-
+          <div class="z-10 mr-16 md:mr-8">
+            <a href="#support" class="bg-custom-green font-poppins px-10 py-2 uppercase text-custom-offwhite font-bold shadow-lg opacity-90 text-sm sm:text-base"> Støt nu </a>
           </div>
           <!-- Burger menu -->
-          <button id="burgermenu" class="mr-4 fixed right-0 z-50" @click="showMenu = !showMenu">
+          <button id="burgermenu" class="mr-6 fixed right-0 z-50" @click="showMenu = !showMenu">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8 text-[#EBF4E9]">
               <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"></path>
             </svg>
           </button>
         </div>
         <!-- Dropdown Menu -->
-    <nav id="mobilmenu" x-show="showMenu" x-transition class="flex flex-col items-end text-custom-offwhite pt-4 pr-4 font-medium fixed right-0 z-50 bg-custom-ocean">
-  <ul class="w-full text-left"> <!-- Skiftet fra text-right til text-left -->
-    <li class="py-2">
-      <a href="#whale1" class="block w-full px-4 py-2 no-underline">Plastproblemet</a>
-    </li>
-    <li class="py-2">
-      <a href="#whale2" class="block w-full px-4 py-2 no-underline">Om plastic change</a>
-    </li>
-    <li class="py-2">
-      <a href="#turtle" class="block w-full px-4 py-2 no-underline">Hvad kan du gøre?</a>
-    </li>
-  </ul>
-</nav>
-
-
+        <nav id="mobilmenu" x-show="showMenu" x-transition class="flex flex-col items-end text-custom-offwhite pt-4 pr-4 font-medium fixed right-0 z-50 bg-custom-ocean">
+          <ul class="w-full text-left">
+            <!-- Skiftet fra text-right til text-left -->
+            <li class="py-2">
+              <a href="#whale1" class="block w-full px-4 py-2 no-underline">Plastproblemet</a>
+            </li>
+            <li class="py-2">
+              <a href="#whale2" class="block w-full px-4 py-2 no-underline">Om plastic change</a>
+            </li>
+            <li class="py-2">
+              <a href="#turtle" class="block w-full px-4 py-2 no-underline">Hvad kan du gøre?</a>
+            </li>
+          </ul>
+        </nav>
       </div>
     </div>
 
     <div id="herocontent" class="pt-32">
-      <div class="relative z-10 px-8 sm:px-16">
+      <div class="relative z-10 px-4 sm:px-8 md:px-16">
         <h1 class="font-bebas text-custom-orange text-6xl sm:text-7xl md:text-8xl lg:text-9xl mb-4">#singleusesucks</h1>
         <NaturalLanguageForm />
       </div>

@@ -16,28 +16,37 @@ import plasticbag from "../assets/images/plastikpose.webp";
   <div class="absolute w-[78%] h-auto max-w-none z-0 opacity-70" style="left: 50%; top: -10%; transform: translateX(-50%) rotate(20deg);">
   <Image src={plasticbag} alt="plastic bag" />
 </div>
-  --><!-- Billede -->
-<section id="quote" class="mt-40">
-  <div class="overflow-clip">
-    <div id="horisontalscrollsection" class="h-[60vw]">
-      <h2 class="font-bebas text-custom-offwhite text-5xl mt-24 m-auto text-center">
+  -->
+<section id="quote" class="relative mt-2 sm:mt-16 md:mt-24 px-4 sm:px-8 md:px-16">
+  <!-- Plastikpose billede -->
+  <div class="absolute inset-0 z-0 flex items-start justify-center pointer-events-none">
+    <Image class="w-[70vw] md:w-[60vw] max-w-none h-auto opacity-50" src={plasticbag} alt="plastic bag" />
+  </div>
+  <!-- Indhold og scroll -->
+  <div class="relative z-10">
+    <div id="horisontalscrollsection" class="h-[150vw] sm:h-[70vw] md:h-[60vw] overflow-hidden">
+      <h2 class="font-bebas text-custom-offwhite text-5xl sm:text-6xl mt-24 pt-20 m-auto text-center mb-8">
         “DET ER JO BARE ÉN PLASTIKPOSE”<br />
         – SAGDE <span class="text-custom-orange">8 MILLIARDER</span> MENNESKER
       </h2>
-      <ul id="horisontalliste" class="list-none pl-0 flex sticky top-[10vh]">
-        <li class="pl-0 flex w-[100vw] items-start justify-center flex-col overflow-hidden flex-grow-0 flex-shrink-0 flex-auto"><p class="mt-6 max-w-lg text-custom-ocean bg-custom-lightblue opacity-75 px-8 py-8">Plastikforurening påvirker både det, vi kan se, og det, vi ikke kan. Plastikposer kan samles op, men mikroplast forbliver i naturen og ender i vores fødekæde, hvor det skader både dyr og mennesker. Havdyr kæmper med affaldet, og skadelige kemikalier spreder sig i miljøet.</p></li>
-        <li class="flex w-[100vw] items-start justify-center flex-col overflow-hidden flex-grow-0 flex-shrink-0 flex-auto"><p class="mt-6 max-w-lg text-custom-ocean bg-custom-lightblue opacity-75 px-8 py-8">Samtidig bidrager plastikproduktionen til klimaforandringerne. Det er en global udfordring, som kræver handling nu, før vi alle står med konsekvenserne af “bare én plastikpose.”</p></li>
+      <ul id="horisontalliste" class="list-none flex gap-4 sticky top-[10vh]">
+        <li class="w-[100vw] flex items-start justify-center flex-col flex-grow-0 flex-shrink-0 overflow-hidden">
+          <p class="mt-6 max-w-md md:max-w-lg text-custom-ocean bg-custom-lightblue opacity-75 px-8 py-8 text-sm sm:text-base"><strong>Plastikforurening</strong> påvirker både det, vi kan se, og det, vi ikke kan. Plastikposer kan samles op, men <strong>mikroplast</strong> forbliver i naturen og ender i vores fødekæde, hvor det <strong>skader både dyr og mennesker</strong>. Havdyr kæmper med affaldet, og skadelige kemikalier spreder sig i miljøet.</p>
+        </li>
+        <li class="w-[100vw] flex items-start justify-center flex-col flex-grow-0 flex-shrink-0 overflow-hidden text-sm sm:text-base">
+          <p class="mt-6 max-w-md md:max-w-lg text-custom-ocean bg-custom-lightblue opacity-75 px-8 py-8">Samtidig bidrager plastikproduktionen til klimaforandringerne. Det er en <strong>global udfordring</strong>, som kræver handling nu, før vi alle står med konsekvenserne af “bare én plastikpose.”</p>
+        </li>
       </ul>
     </div>
   </div>
 </section>
 
 <script>
-  import { animate, inView, scroll } from "motion";
+  import { animate, scroll } from "motion";
 
   scroll(
     animate("#horisontalliste", {
-      transform: ["none", "translateX(-500vw)"],
+      transform: ["translateX(22vw)", "translateX(-80vw)"],
     }),
     { target: document.querySelector("#horisontalscrollsection") }
   );
