@@ -1,14 +1,28 @@
 ---
 import { Image } from "astro:assets";
-import whaleleft from "../assets/images/hvalfravenstre.webp";
+import whalebackground2 from "../assets/images/whalebackground2.webp";
 ---
 
-<section id="whale2" class="mx-16 mb-8 relative">
-  <div class="z-10 relative mt-40">
-    <p class="max-w-lg text-custom-ocean bg-custom-lightblue opacity-75 px-8 py-8 m-auto">Plastic Change har som <strong>mission</strong> at skabe handling lokalt, nationalt og globalt. Vi sætter fokus på <strong>plastikudfordringerne</strong> gennem mobilisering, vidensdeling og samarbejde med befolkning, erhvervsliv og politikere.</p>
-    <br />
-    <p class="max-w-lg text-custom-ocean bg-custom-lightblue opacity-75 px-8 py-8 m-auto">Vores <strong>vision</strong> er et miljø uden <strong>plastikforurening</strong>, så kommende generationer kan nyde havets ressourcer uden risiko for plastikindhold.</p>
+<section id="whale2" class="relative w-full">
+  <div class="z-10 relative mt-40 mx-16 mb-8">
+    <div class="parallaxelement">
+      <p class="max-w-lg text-custom-ocean bg-custom-lightblue opacity-75 px-8 py-8 m-auto">Plastic Change har som <strong>mission</strong> at skabe handling lokalt, nationalt og globalt. Vi sætter fokus på <strong>plastikudfordringerne</strong> gennem mobilisering, vidensdeling og samarbejde med befolkning, erhvervsliv og politikere.</p>
+    </div>
+    <!-- <div class="parallaxelement">
+      <p class="max-w-lg text-custom-ocean bg-custom-lightblue opacity-75 px-8 py-8 m-auto">Vores <strong>vision</strong> er et miljø uden <strong>plastikforurening</strong>, så kommende generationer kan nyde havets ressourcer uden risiko for plastikindhold.</p>-->
+    </div>
   </div>
 
-  <div class="overflow-hidden"><Image class="absolute z-0 w-[180%] h-auto max-w-none" style="left: -500px; top: -130%;" src={whaleleft} alt="whale" /></div>
+  <!-- Hval baggrundsbillede -->
+  <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+    <Image class="max-w-full h-auto" src={whalebackground2} alt="whale" />
+  </div>
 </section>
+
+<script>
+  import { animate, inView, scroll } from "motion";
+
+  scroll(animate(".parallaxelement", { y: [0, 100] }), {
+    target: document.querySelector(".parallaxelement"),
+  });
+</script>
