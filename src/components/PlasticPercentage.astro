@@ -12,7 +12,7 @@ import plasticcup from "../assets/images/plastikkopgennemsigtig.webp";
 
 <section id="platicpercentage">
   <div class="relative">
-    <div class="h-screen text-center m-auto">
+    <div class="text-center m-auto h-[60vh]">
       <h2 class="font-bebas text-custom-offwhite text-5xl sm:text-6xl m-auto">
         <span class="text-custom-orange">5%</span> FLYDER I OVERFLADEN
       </h2>
@@ -25,15 +25,17 @@ import plasticcup from "../assets/images/plastikkopgennemsigtig.webp";
     <Image class="absolute z-0 w-[90%] opacity-80" style="left: -75px; top: 220%;" src={bubbles} alt="bubbles" />
 
     <!-- Billeder -->
-    <div class="relative inset-0 grid grid-cols-6 grid-rows-4 gap-2">
-      <Image class="absolute col-start-2 col-span-2 row-span-2 row-start-4 w-[20vw] opacity-80" src={whalebag} alt="plastic bag" />
-      <Image class="absolute col-start-5 col-span-1 row-span-1 row-start-3 w-[20vw] opacity-90" src={plasticbag} alt="plastic bag" />
-      <Image class="absolute col-start-3 col-span-1 row-span-1 row-start-4 w-full opacity-90 rotate-[10deg]" src={plasticbag} alt="plastic bag" />
-      <Image class="absolute col-start-4 col-span-1 row-span-1 row-start-4 w-[20vw] opacity-80 rotate-[90deg]" src={plasticbottle} alt="plastic bottle" />
-      <Image class="absolute col-start-3 col-span-1 row-span-1 row-start-4 w-[20vw] opacity-80 rotate-[40deg]" src={plasticbottle} alt="plastic bottle" />
+    <div class="relative inset-0 grid grid-cols-6 grid-rows-4 gap-2 pb-40">
+      <Image class="absolute col-start-2 col-span-2 row-span-2 row-start-4 w-[20vw] opacity-80 animationwobble" style="animation-duration: 20s;" src={whalebag} alt="plastic bag" />
+      <Image class="absolute col-start-5 col-span-1 row-span-1 row-start-3 w-[20vw] opacity-90 animationwobble" style="animation-duration: 20s;" src={plasticbag} alt="plastic bag" />
+      <Image class="absolute col-start-3 col-span-1 row-span-1 row-start-4 w-full opacity-90 rotate-[10deg] animationwobble" style="animation-duration: 20s;" src={plasticbag} alt="plastic bag" />
+      <Image class="absolute col-start-4 col-span-1 row-span-1 row-start-4 w-[20vw] opacity-80 rotate-[90deg] animationwobble" style="animation-duration: 20s;" src={plasticbottle} alt="plastic bottle" />
+      <Image class="absolute col-start-3 col-span-1 row-span-1 row-start-4 w-[20vw] opacity-80 rotate-[40deg] animationwobble" style="animation-duration: 20s;" src={plasticbottle} alt="plastic bottle" />
       <Image class="absolute col-start-5 col-span-1 row-span-1 row-start-4 w-[10vw] opacity-70 rotate-[240deg] float-up" src={plasticcup} alt="plastic cup" />
-      <Image class="absolute col-span-1 col-start-2 row-span-1 w-[10vw] opacity-85 rotate-[40deg]" src={plasticfork} alt="plastic fork" />
-      <Image class="absolute col-span-1 col-start-3 row-span-1 w-[10vw] opacity-75 rotate-[240deg]" src={plasticspoon} alt="plastic spoon" />
+      <Image class="absolute col-start-4 col-span-1 row-span-1 row-start-4 w-[10vw] opacity-70 rotate-[40deg] animationwobble" style="animation-duration: 20s;" src={plasticcup} alt="plastic cup" />
+      <Image class="absolute col-span-1 col-start-2 row-span-1 w-[10vw] opacity-85 rotate-[40deg] animationwobble" style="animation-duration: 20s;" src={plasticfork} alt="plastic fork" />
+      <Image class="absolute col-span-1 col-start-5 row-span-1 w-[10vw] opacity-85 rotate-[90deg] animationwobble" style="animation-duration: 20s;" src={plasticfork} alt="plastic fork" />
+      <Image class="absolute col-span-1 col-start-3 row-span-1 w-[10vw] opacity-75 rotate-[240deg] animationwobble" style="animation-duration: 20s;" src={plasticspoon} alt="plastic spoon" />
     </div>
   </div>
 </section>
