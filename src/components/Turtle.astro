@@ -3,7 +3,7 @@ import { Image } from "astro:assets";
 import skildpadde from "../assets/images/skildpadde.webp";
 ---
 
-<section id="turtle" class="relative px-4 sm:px-8 md:px-16">
+<section id="turtle" class="relative px-4 sm:px-8 md:px-16 overflow-clip">
   <!-- Skilpadde baggrundsbillede -->
   <div class="absolute inset-0 flex items-start justify-center pointer-events-none">
     <Image class="w-[70vw] md:w-[60vw] h-auto" src={skildpadde} alt="whale" />
