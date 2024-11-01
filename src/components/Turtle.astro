@@ -3,46 +3,71 @@ import { Image } from "astro:assets";
 import skildpadde from "../assets/images/skildpadde.webp";
 ---
 
-<section id="turtle" class="relative">
-  <div class="grid grid-cols-2 mx-16 relative z-10">
+<section id="turtle" class="relative px-4 sm:px-8 md:px-16">
+  <!-- Skilpadde baggrundsbillede -->
+  <div class="absolute inset-0 flex items-start justify-center pointer-events-none">
+    <Image class="w-[70vw] md:w-[60vw] h-auto" src={skildpadde} alt="whale" />
+  </div>
+  <div class="md:grid md:grid-cols-[1fr_2fr] gap-24 relative z-10">
     <div>
       <h2 class="text-custom-offwhite font-bebas text-5xl max-w-sm max-w-xxs">
         DU KAN HJÆLPE MED AT <span class="text-custom-orange">BEKÆMPE</span> PLASTFORURENING
       </h2>
     </div>
-    <div>
-      <div class="max-w-lg text-custom-ocean bg-custom-lightblue opacity-75 px-8 py-8">
-        <p><strong>Bliv en Plastic Changer</strong></p>
-        <p>Lær mere om, hvordan du kan blive en del af Plastic Changer-bevægelsen <a href="https://plasticchange.dk/plastic-changers/" class="underline">her</a>.</p>
-      </div>
-      <br />
-      <div class="max-w-lg text-custom-ocean bg-custom-lightblue opacity-75 px-8 py-8">
-        <p><strong>Lav en donation</strong></p>
-        <p>Støt os med en engangsdonation eller opret et månedligt abonnement <a href="#support" class="underline">her</a>.</p>
-      </div>
-      <br />
-      <div class="max-w-lg text-custom-ocean bg-custom-lightblue opacity-75 px-8 py-8">
-        <p><strong>Tilmeld dig nyhedsbrevet</strong></p>
-        <p>Få opdateringer og tips til, hvordan du kan bidrage til kampen mod plast <a href="#footer" class="underline">her</a>.</p>
-      </div>
-      <br />
-      <div class="max-w-lg text-custom-ocean bg-custom-lightblue opacity-75 px-8 py-8">
-        <p><strong>Følg os på sociale medier</strong></p>
-        <p>
-          Bliv en del af fællesskabet på
-          <a href="https://www.facebook.com/plasticchange/" class="underline">Facebook</a>,
-          <a href="https://www.instagram.com/plasticchange" class="underline">Instagram</a> og
-          <a href="https://x.com/plasticchange" class="underline">Twitter</a>.
-        </p>
-      </div>
+    <div id="horisontalscrollsection2" class="h-[35vw] overflow-hidden">
+      <ul id="horisontalliste2" class="list-none flex gap-4 sticky top-[10vh]">
+        <li class="w-[100vw] flex items-start justify-center flex-col flex-grow-0 flex-shrink-0 overflow-hidden">
+          <div class="max-w-lg text-custom-ocean bg-custom-lightblue opacity-75 px-8 py-8">
+            <p><strong>Bliv en Plastic Changer</strong></p>
+            <p>Lær mere om, hvordan du kan blive en del af Plastic Changer-bevægelsen <a href="https://plasticchange.dk/plastic-changers/" class="underline">her</a>.</p>
+          </div>
+        </li>
+        <li class="w-[100vw] flex items-start justify-center flex-col flex-grow-0 flex-shrink-0 overflow-hidden text-sm sm:text-base">
+          <div class="max-w-lg text-custom-ocean bg-custom-lightblue opacity-75 px-8 py-8">
+            <p><strong>Lav en donation</strong></p>
+            <p>Støt os med en engangsdonation eller opret et månedligt abonnement <a href="#support" class="underline">her</a>.</p>
+          </div>
+        </li>
+        <li class="w-[100vw] flex items-start justify-center flex-col flex-grow-0 flex-shrink-0 overflow-hidden text-sm sm:text-base">
+          <div class="max-w-lg text-custom-ocean bg-custom-lightblue opacity-75 px-8 py-8">
+            <p><strong>Tilmeld dig nyhedsbrevet</strong></p>
+            <p>Få opdateringer og tips til, hvordan du kan bidrage til kampen mod plast <a href="#footer" class="underline">her</a>.</p>
+          </div>
+        </li>
+        <li class="w-[100vw] flex items-start justify-center flex-col flex-grow-0 flex-shrink-0 overflow-hidden text-sm sm:text-base">
+          <div class="max-w-lg text-custom-ocean bg-custom-lightblue opacity-75 px-8 py-8">
+            <p><strong>Følg os på sociale medier</strong></p>
+            <p>
+              Bliv en del af fællesskabet på
+              <a href="https://www.facebook.com/plasticchange/" class="underline">Facebook</a>,
+              <a href="https://www.instagram.com/plasticchange" class="underline">Instagram</a> og
+              <a href="https://x.com/plasticchange" class="underline">Twitter</a>.
+            </p>
+          </div>
+        </li>
+      </ul>
     </div>
   </div>
   <div class="relative z-10">
-    <h1 class="font-bebas text-custom-orange text-9xl mb-4 px-20">#singleusesucks</h1>
-  </div>
-
-  <!-- Billede -->
-  <div class="absolute w-[60%] h-auto max-w-none z-0" style="left: 50%; top: -15%; transform: translateX(-50%) rotate(0deg);">
-    <Image src={skildpadde} alt="skildpadde" />
+    <h1 class="font-bebas text-custom-orange text-6xl sm:text-7xl md:text-8xl lg:text-9xl mb-4 flashanimation" style="animation-duration: 4s;">#singleusesucks</h1>
   </div>
 </section>
+
+<script>
+  import { animate, inView, scroll } from "motion";
+
+  scroll(
+    animate("#horisontalliste2", {
+      transform: ["none", "translateX(-400vw)"],
+    }),
+    { target: document.querySelector("#horisontalscrollsection2") }
+  );
+
+  const animations = document.querySelectorAll(".flashanimation");
+
+  animations.forEach((item) => {
+    inView(item, () => {
+      item.classList.add("animate__animated", "animate__flash", "animate__infinite", "animate__delay-1s", "ease-in-out");
+    });
+  });
+</script>

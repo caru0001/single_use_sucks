@@ -3,18 +3,18 @@ import { Image } from "astro:assets";
 import whalebackground2 from "../assets/images/whalebackground2.webp";
 ---
 
-<section id="whale2" class="relative w-full">
+<section id="whale2" class="relative w-full h-[80vh] md:h-[110vh] px-4 sm:px-8 md:px-16 pb-8 sm:pb-24 mb-8 sm:mb-16">
   <div class="z-10 relative mt-40 mx-16 mb-8">
-    <div class="parallaxelement">
-      <p class="max-w-lg text-custom-ocean bg-custom-lightblue opacity-75 px-8 py-8 m-auto">Plastic Change har som <strong>mission</strong> at skabe handling lokalt, nationalt og globalt. Vi sætter fokus på <strong>plastikudfordringerne</strong> gennem mobilisering, vidensdeling og samarbejde med befolkning, erhvervsliv og politikere.</p>
+    <div class="parallaxelement2">
+      <p class="max-w-lg text-custom-ocean bg-custom-lightblue opacity-75 px-4 sm:px-8 text-sm sm:text-base py-8 m-auto mb-16">Plastic Change har som <strong>mission</strong> at skabe handling lokalt, nationalt og globalt. Vi sætter fokus på <strong>plastikudfordringerne</strong> gennem mobilisering, vidensdeling og samarbejde med befolkning, erhvervsliv og politikere.</p>
     </div>
-    <!-- <div class="parallaxelement">
-      <p class="max-w-lg text-custom-ocean bg-custom-lightblue opacity-75 px-8 py-8 m-auto">Vores <strong>vision</strong> er et miljø uden <strong>plastikforurening</strong>, så kommende generationer kan nyde havets ressourcer uden risiko for plastikindhold.</p>-->
+    <div class="parallaxelement2">
+      <p class="max-w-lg text-custom-ocean bg-custom-lightblue opacity-75 px-4 sm:px-8 text-sm sm:text-base py-8 m-auto">Vores <strong>vision</strong> er et miljø uden <strong>plastikforurening</strong>, så kommende generationer kan nyde havets ressourcer uden risiko for plastikindhold.</p>
     </div>
   </div>
 
   <!-- Hval baggrundsbillede -->
-  <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+  <div class="absolute inset-0 flex items-start justify-center pointer-events-none">
     <Image class="max-w-full h-auto" src={whalebackground2} alt="whale" />
   </div>
 </section>
@@ -22,7 +22,7 @@ import whalebackground2 from "../assets/images/whalebackground2.webp";
 <script>
   import { animate, inView, scroll } from "motion";
 
-  scroll(animate(".parallaxelement", { y: [0, 100] }), {
-    target: document.querySelector(".parallaxelement"),
+  scroll(animate(".parallaxelement2", { y: [0, 200] }), {
+    target: document.querySelector(".parallaxelement2"),
   });
 </script>

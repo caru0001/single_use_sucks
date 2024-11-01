@@ -4,14 +4,13 @@ import bobler from "../assets/images/bobler.webp";
 import net from "../assets/images/net.webp";
 ---
 
-<section class="relative mt-32" id="support">
+<section class="relative mt-16 sm:mt-32" id="support">
   <!-- Grid layout: 1 kolonne på mobil, 2 kolonner på desktop -->
   <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mx-4 md:mx-16 pt-16 md:pt-32 relative z-10">
-    
     <!-- Første kolonne med tekst -->
-    <div class="max-w-xs text-custom-offwhite z-10 mx-auto md:mx-0 text-center md:text-left">
+    <div class="max-w-xs text-custom-offwhite z-10">
       <!-- Tekststørrelse: mindre på mobil, større på desktop -->
-      <h2 class="text-3xl md:text-5xl font-bebas pb-4 md:pb-8">
+      <h2 class="text-5xl sm:text-6xl max-w-xxs font-bebas pb-4 md:pb-8">
         DIT BIDRAG GØR EN <span class="text-custom-orange">FORSKEL</span>
       </h2>
       <!-- Tekststørrelse: mindre på mobil, større på desktop -->
@@ -24,30 +23,28 @@ import net from "../assets/images/net.webp";
       <!-- Tekststørrelse: mindre på mobil, større på desktop, centrering på mobil, venstrejusteret på desktop -->
       <p class="text-2xl md:text-3xl font-bebas mb-6 md:mb-12 text-custom-darkblue text-left md:text-left">JEG VIL STØTTE</p>
       <form>
-        
-       <!-- Vælg betalingstype: "Månedligt" eller "En enkelt gang" -->
-<!-- Retning: på mobil stables de (én over den anden), men ved desktop vises de side om side -->
-<div class="mb-8 flex flex-col md:flex-row gap-4 md:gap-10 items-center justify-center md:justify-start">
-  <label class="flex items-center space-x-2 cursor-pointer">
-    <input type="radio" id="maanedligt" name="betaling" checked class="hidden peer" />
-    <span class="w-5 h-5 border-2 border-custom-darkblue rounded-full peer-checked:bg-custom-darkblue peer-checked:border-custom-darkblue"></span>
-    <span class="text-sm md:text-lg">Månedligt</span>
-  </label>
-  <label class="flex items-center space-x-2 cursor-pointer">
-    <input type="radio" id="enkelt" name="betaling" class="hidden peer" />
-    <span class="w-5 h-5 border-2 border-custom-darkblue rounded-full peer-checked:bg-custom-darkblue peer-checked:border-custom-darkblue"></span>
-    <span class="text-sm md:text-lg">En enkelt gang</span>
-  </label>
-</div>
+        <!-- Vælg betalingstype: "Månedligt" eller "En enkelt gang" -->
+        <!-- Retning: på mobil stables de (én over den anden), men ved desktop vises de side om side -->
+        <div class="mb-8 flex flex-col md:flex-row gap-4 md:gap-10 items-center justify-center md:justify-start">
+          <label class="flex items-center space-x-2 cursor-pointer">
+            <input type="radio" id="maanedligt" name="betaling" checked class="hidden peer" />
+            <span class="w-5 h-5 border-2 border-custom-darkblue rounded-full peer-checked:bg-custom-darkblue peer-checked:border-custom-darkblue"></span>
+            <span class="text-sm md:text-lg">Månedligt</span>
+          </label>
+          <label class="flex items-center space-x-2 cursor-pointer">
+            <input type="radio" id="enkelt" name="betaling" class="hidden peer" />
+            <span class="w-5 h-5 border-2 border-custom-darkblue rounded-full peer-checked:bg-custom-darkblue peer-checked:border-custom-darkblue"></span>
+            <span class="text-sm md:text-lg">En enkelt gang</span>
+          </label>
+        </div>
 
-<!-- Knapper til at vælge beløb: 50, 75, eller 125 -->
-<!-- Knapperne fylder hele bredden på mobil, men får normal størrelse på desktop -->
-<div class="flex flex-wrap gap-4 justify-center md:justify-start mb-4">
-  <button type="button" class="bg-transparent text-custom-darkblue border border-custom-darkblue rounded-full py-2 px-4 text-sm md:py-6 md:px-7 md:text-lg hover:bg-custom-darkblue hover:text-custom-offwhite transition duration-300">50</button>
-  <button type="button" class="bg-transparent text-custom-darkblue border border-custom-darkblue rounded-full py-2 px-4 text-sm md:py-6 md:px-7 md:text-lg hover:bg-custom-darkblue hover:text-custom-offwhite transition duration-300">75</button>
-  <button type="button" class="bg-transparent text-custom-darkblue border border-custom-darkblue rounded-full py-2 px-4 text-sm md:py-6 md:px-6 md:text-lg hover:bg-custom-darkblue hover:text-custom-offwhite transition duration-300">125</button>
-</div>
-
+        <!-- Knapper til at vælge beløb: 50, 75, eller 125 -->
+        <!-- Knapperne fylder hele bredden på mobil, men får normal størrelse på desktop -->
+        <div class="flex flex-wrap gap-4 justify-center md:justify-start mb-4">
+          <button type="button" class="bg-transparent text-custom-darkblue border border-custom-darkblue rounded-full py-2 px-4 text-sm md:py-6 md:px-7 md:text-lg hover:bg-custom-darkblue hover:text-custom-offwhite transition duration-300">50</button>
+          <button type="button" class="bg-transparent text-custom-darkblue border border-custom-darkblue rounded-full py-2 px-4 text-sm md:py-6 md:px-7 md:text-lg hover:bg-custom-darkblue hover:text-custom-offwhite transition duration-300">75</button>
+          <button type="button" class="bg-transparent text-custom-darkblue border border-custom-darkblue rounded-full py-2 px-4 text-sm md:py-6 md:px-6 md:text-lg hover:bg-custom-darkblue hover:text-custom-offwhite transition duration-300">125</button>
+        </div>
 
         <!-- Inputfelt og støt-knap: fylder hele bredden på mobil, standard bredde på desktop -->
         <div class="flex flex-col space-y-4 mt-6 md:mt-8 items-center">
